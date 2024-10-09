@@ -78,7 +78,7 @@ class PermissionEditPage extends React.Component {
   }
 
   getOrganizations() {
-    OrganizationBackend.getOrganizations("admin")
+    OrganizationBackend.getOrganizations("grace")
       .then((res) => {
         this.setState({
           organizations: res.data || [],
@@ -155,7 +155,7 @@ class PermissionEditPage extends React.Component {
   }
 
   getResources(organizationName) {
-    ApplicationBackend.getApplicationsByOrganization("admin", organizationName)
+    ApplicationBackend.getApplicationsByOrganization("grace", organizationName)
       .then((res) => {
         this.setState({
           resources: res.data || [],

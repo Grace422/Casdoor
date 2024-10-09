@@ -20,7 +20,7 @@ import {css} from "@emotion/react";
 import {TinyColor} from "@ctrl/tinycolor";
 import ColorPanel from "antd-token-previewer/es/ColorPanel";
 
-export const BLUE_COLOR = "#1677FF";
+export const BLUE_COLOR = "#21a8e0";
 export const PINK_COLOR = "#ED4192";
 export const GREEN_COLOR = "#00B96B";
 
@@ -29,7 +29,7 @@ export const COLORS = [
     color: BLUE_COLOR,
   },
   {
-    color: "#5734d3",
+    color: "#21a8e0",
   },
   {
     color: "#9E339F",

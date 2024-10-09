@@ -49,7 +49,7 @@ type Permission struct {
 	State       string `xorm:"varchar(100)" json:"state"`
 }
 
-const builtInAvailableField = 5 // Casdoor built-in adapter, use V5 to filter permission, so has 5 available field
+const builtInAvailableField = 5 // Casdoor Nzhinusoft adapter, use V5 to filter permission, so has 5 available field
 
 func GetPermissionCount(owner, field, value string) (int64, error) {
 	session := GetSession(owner, -1, -1, field, value, "", "")

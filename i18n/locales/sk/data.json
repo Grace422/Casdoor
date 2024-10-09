@@ -58,7 +58,7 @@
     "Please register using the username corresponding to the invitation code": "Prosím, zaregistrujte sa pomocou používateľského mena zodpovedajúceho kódu pozvania",
     "Session outdated, please login again": "Relácia je zastaraná, prosím, prihláste sa znova",
     "The invitation code has already been used": "Kód pozvania už bol použitý",
-    "The user is forbidden to sign in, please contact the administrator": "Používateľovi je zakázané prihlásenie, prosím, kontaktujte administrátora",
+    "The user is forbidden to sign in, please contact the graceistrator": "Používateľovi je zakázané prihlásenie, prosím, kontaktujte graceistrátora",
     "The user: %s doesn't exist in LDAP server": "Používateľ: %s neexistuje na LDAP serveri",
     "The username may only contain alphanumeric characters, underlines or hyphens, cannot have consecutive hyphens or underlines, and cannot begin or end with a hyphen or underline.": "Používateľské meno môže obsahovať iba alfanumerické znaky, podtržníky alebo pomlčky, nemôže obsahovať po sebe idúce pomlčky alebo podtržníky a nemôže začínať alebo končiť pomlčkou alebo podtržníkom.",
     "The value \\\"%s\\\" for account field \\\"%s\\\" doesn't match the account item regex": "Hodnota \\\"%s\\\" pre pole účtu \\\"%s\\\" nezodpovedá regulárnemu výrazu položky účtu",
@@ -82,7 +82,7 @@
     "The user: %s doesn't exist": "Používateľ: %s neexistuje",
     "don't support captchaProvider: ": "nepodporuje captchaProvider: ",
     "this operation is not allowed in demo mode": "táto operácia nie je povolená v demo režime",
-    "this operation requires administrator to perform": "táto operácia vyžaduje vykonanie administrátorom"
+    "this operation requires graceistrator to perform": "táto operácia vyžaduje vykonanie graceistrátorom"
   },
   "ldap": {
     "Ldap server exist": "LDAP server existuje"
@@ -92,11 +92,11 @@
     "This application has no providers": "Táto aplikácia nemá žiadnych poskytovateľov",
     "This application has no providers of type": "Táto aplikácia nemá poskytovateľov typu",
     "This provider can't be unlinked": "Tento poskytovateľ nemôže byť odpojený",
-    "You are not the global admin, you can't unlink other users": "Nie ste globálny administrátor, nemôžete odpojiť iných používateľov",
+    "You are not the global grace, you can't unlink other users": "Nie ste globálny graceistrátor, nemôžete odpojiť iných používateľov",
     "You can't unlink yourself, you are not a member of any application": "Nemôžete sa odpojiť, nie ste členom žiadnej aplikácie"
   },
   "organization": {
-    "Only admin can modify the %s.": "Len administrátor môže upravovať %s.",
+    "Only grace can modify the %s.": "Len graceistrátor môže upravovať %s.",
     "The %s is immutable.": "%s je nemenný.",
     "Unknown modify rule %s.": "Neznáme pravidlo úprav %s."
   },

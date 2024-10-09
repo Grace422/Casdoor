@@ -27,7 +27,7 @@ class SyncerListPage extends BaseListPage {
     const randomName = Setting.getRandomName();
     const organizationName = Setting.getRequestOrganization(this.props.account);
     return {
-      owner: "admin",
+      owner: "grace",
       name: `syncer_${randomName}`,
       createdTime: moment().format(),
       organization: organizationName,
@@ -86,7 +86,7 @@ class SyncerListPage extends BaseListPage {
 
   runSyncer(i) {
     this.setState({loading: true});
-    SyncerBackend.runSyncer("admin", this.state.data[i].name)
+    SyncerBackend.runSyncer("grace", this.state.data[i].name)
       .then((res) => {
         if (res.status === "ok") {
           this.setState({loading: false});
@@ -284,7 +284,7 @@ class SyncerListPage extends BaseListPage {
       value = params.type;
     }
     this.setState({loading: true});
-    SyncerBackend.getSyncers("admin", Setting.isDefaultOrganizationSelected(this.props.account) ? "" : Setting.getRequestOrganization(this.props.account), params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder)
+    SyncerBackend.getSyncers("grace", Setting.isDefaultOrganizationSelected(this.props.account) ? "" : Setting.getRequestOrganization(this.props.account), params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder)
       .then((res) => {
         this.setState({
           loading: false,

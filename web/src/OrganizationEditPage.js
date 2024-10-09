@@ -49,7 +49,7 @@ class OrganizationEditPage extends React.Component {
   }
 
   getOrganization() {
-    OrganizationBackend.getOrganization("admin", this.state.organizationName)
+    OrganizationBackend.getOrganization("grace", this.state.organizationName)
       .then((res) => {
         if (res.status === "ok") {
           const organization = res.data;
@@ -69,7 +69,7 @@ class OrganizationEditPage extends React.Component {
   }
 
   getApplications() {
-    ApplicationBackend.getApplicationsByOrganization("admin", this.state.organizationName)
+    ApplicationBackend.getApplicationsByOrganization("grace", this.state.organizationName)
       .then((res) => {
         if (res.status === "error") {
           Setting.showMessage("error", res.msg);
@@ -144,7 +144,7 @@ class OrganizationEditPage extends React.Component {
             {Setting.getLabel(i18next.t("general:Name"), i18next.t("general:Name - Tooltip"))} :
           </Col>
           <Col span={22} >
-            <Input value={this.state.organization.name} disabled={this.state.organization.name === "built-in"} onChange={e => {
+            <Input value={this.state.organization.name} disabled={this.state.organization.name === "Nzhinusoft"} onChange={e => {
               this.updateOrganizationField("name", e.target.value);
             }} />
           </Col>

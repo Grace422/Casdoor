@@ -93,9 +93,9 @@ export function getAlgorithmNames(themeData) {
 
 export function getLogo(themes) {
   if (themes.includes("dark")) {
-    return `${StaticBaseUrl}/img/casdoor-logo_1185x256_dark.png`;
+    return "./GOOGLE.jpg";
   } else {
-    return `${StaticBaseUrl}/img/casdoor-logo_1185x256.png`;
+    return "./GOOGLE.jpg";
   }
 }
 
@@ -763,7 +763,7 @@ export function isAdminUser(account) {
   if (account === undefined || account === null) {
     return false;
   }
-  return account.owner === "built-in";
+  return account.owner === "Nzhinusoft";
 }
 
 export function isLocalAdminUser(account) {
@@ -1453,19 +1453,19 @@ export function isDefaultOrganizationSelected(account) {
 }
 
 const BuiltInObjects = [
-  "api-enforcer-built-in",
-  "user-enforcer-built-in",
-  "api-model-built-in",
-  "user-model-built-in",
-  "api-adapter-built-in",
-  "user-adapter-built-in",
+  "api-enforcer-Nzhinusoft",
+  "user-enforcer-Nzhinusoft",
+  "api-model-Nzhinusoft",
+  "user-model-Nzhinusoft",
+  "api-adapter-Nzhinusoft",
+  "user-adapter-Nzhinusoft",
 ];
 
 export function builtInObject(obj) {
   if (obj === undefined || obj === null) {
     return false;
   }
-  return obj.owner === "built-in" && BuiltInObjects.includes(obj.name);
+  return obj.owner === "Nzhinusoft" && BuiltInObjects.includes(obj.name);
 }
 
 export function getCurrencySymbol(currency) {
@@ -1498,7 +1498,7 @@ export function getUserCommonFields() {
 }
 
 export function getDefaultFooterContent() {
-  return "Powered by <a target=\"_blank\" href=\"https://casdoor.org\" rel=\"noreferrer\"><img style=\"padding-bottom: 3px\" height=\"20\" alt=\"Casdoor\" src=\"https://cdn.casbin.org/img/casdoor-logo_1185x256.png\"/></a>";
+  return "Powered by <a target=\"_blank\" href=\"https://nzhinusoft.com/\" rel=\"noreferrer\"><img style=\"padding-bottom: 3px\" height=\"20\" alt=\"Nzhinusoft\" src=\"https://nzhinusoft.com/assets/img/Nztrfinal.png\"/></a>";
 }
 
 export function getEmptyFooterContent() {
@@ -1529,8 +1529,8 @@ export function getDefaultHtmlEmailContent() {
 <body>
 <div class="email-container">
   <div class="header">
-        <h3>Casbin Organization</h3>
-        <img src="https://cdn.casbin.org/img/casdoor-logo_1185x256.png" alt="Casdoor Logo" width="300">
+        <h3>Nzhinusoft</h3>
+        <img src="https://nzhinusoft.com/assets/img/Nztrfinal.png" alt="Nzhinusoft Logo" width="300">
     </div>
     <p><strong>%{user.friendlyName}</strong>, here is your verification code</p>
     <p>Use this code for your transaction. It's valid for 5 minutes</p>
@@ -1538,10 +1538,10 @@ export function getDefaultHtmlEmailContent() {
         %s
     </div>
     <p>Thanks</p>
-    <p>Casbin Team</p>
+    <p>Nzhinusoft</p>
     <hr>
     <div class="footer">
-        <p>Casdoor is a brand operated by Casbin organization. For more info please refer to <a href="https://casdoor.org">https://casdoor.org</a></p>
+        <p>Nzhinusoft is an ESN. For more info please refer to <a href="https://nzhinusoft.com">https://nzhinusoft.com</a></p>
     </div>
 </div>
 </body>

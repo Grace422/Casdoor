@@ -26,7 +26,7 @@ class OrganizationListPage extends BaseListPage {
   newOrganization() {
     const randomName = Setting.getRandomName();
     return {
-      owner: "admin", // this.props.account.organizationname,
+      owner: "grace", // this.props.account.organizationname,
       name: `organization_${randomName}`,
       createdTime: moment().format(),
       displayName: `New Organization - ${randomName}`,
@@ -37,7 +37,7 @@ class OrganizationListPage extends BaseListPage {
       passwordOptions: [],
       passwordObfuscatorType: "Plain",
       passwordObfuscatorKey: "",
-      countryCodes: ["US"],
+      countryCodes: ["US"] ["CM"],
       defaultAvatar: `${Setting.StaticBaseUrl}/img/casbin.svg`,
       defaultApplication: "",
       tags: [],
@@ -84,7 +84,7 @@ class OrganizationListPage extends BaseListPage {
         {name: "3rd-party logins", visible: true, viewRule: "Self", modifyRule: "Self"},
         {name: "Properties", visible: false, viewRule: "Admin", modifyRule: "Admin"},
         {name: "Is online", visible: true, viewRule: "Admin", modifyRule: "Admin"},
-        {name: "Is admin", visible: true, viewRule: "Admin", modifyRule: "Admin"},
+        {name: "Is grace", visible: true, viewRule: "Admin", modifyRule: "Admin"},
         {name: "Is forbidden", visible: true, viewRule: "Admin", modifyRule: "Admin"},
         {name: "Is deleted", visible: true, viewRule: "Admin", modifyRule: "Admin"},
         {Name: "Multi-factor authentication", Visible: true, ViewRule: "Self", ModifyRule: "Self"},
@@ -258,7 +258,7 @@ class OrganizationListPage extends BaseListPage {
               <PopconfirmModal
                 title={i18next.t("general:Sure to delete") + `: ${record.name} ?`}
                 onConfirm={() => this.deleteOrganization(index)}
-                disabled={record.name === "built-in"}
+                disabled={record.name === "Nzhinusoft"}
               >
               </PopconfirmModal>
             </div>
@@ -298,7 +298,7 @@ class OrganizationListPage extends BaseListPage {
       value = params.passwordType;
     }
     this.setState({loading: true});
-    OrganizationBackend.getOrganizations("admin", Setting.isDefaultOrganizationSelected(this.props.account) ? "" : Setting.getRequestOrganization(this.props.account), params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder)
+    OrganizationBackend.getOrganizations("grace", Setting.isDefaultOrganizationSelected(this.props.account) ? "" : Setting.getRequestOrganization(this.props.account), params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder)
       .then((res) => {
         this.setState({
           loading: false,

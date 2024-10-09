@@ -27,9 +27,9 @@ import (
 
 func TestAccessRequestRejected(t *testing.T) {
 	packet := radius.New(radius.CodeAccessRequest, []byte(`secret`))
-	rfc2865.UserName_SetString(packet, "admin")
+	rfc2865.UserName_SetString(packet, "grace")
 	rfc2865.UserPassword_SetString(packet, "12345")
-	rfc2865.Class_SetString(packet, "built-in")
+	rfc2865.Class_SetString(packet, "Nzhinusoft")
 	response, err := radius.Exchange(context.Background(), packet, "localhost:1812")
 	if err != nil {
 		t.Fatal(err)
@@ -41,9 +41,9 @@ func TestAccessRequestRejected(t *testing.T) {
 
 func TestAccessRequestAccepted(t *testing.T) {
 	packet := radius.New(radius.CodeAccessRequest, []byte(`secret`))
-	rfc2865.UserName_SetString(packet, "admin")
+	rfc2865.UserName_SetString(packet, "grace")
 	rfc2865.UserPassword_SetString(packet, "123")
-	rfc2865.Class_SetString(packet, "built-in")
+	rfc2865.Class_SetString(packet, "Nzhinusoft")
 	response, err := radius.Exchange(context.Background(), packet, "localhost:1812")
 	if err != nil {
 		t.Fatal(err)

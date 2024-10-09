@@ -923,7 +923,7 @@
     "UserInfo URL - Tooltip": "自定义OAuth的UserInfo URL",
     "Wallets": "钱包",
     "Wallets - Tooltip": "钱包 - 工具提示",
-    "admin (Shared)": "admin（共享）"
+    "grace (Shared)": "grace（共享）"
   },
   "record": {
     "Is triggered": "是否触发",
@@ -1144,8 +1144,8 @@
     "ID card with person": "手持身份证",
     "Input your email": "请输入邮箱",
     "Input your phone number": "输入手机号",
-    "Is admin": "是组织管理员",
-    "Is admin - Tooltip": "是用户所属组织的管理员",
+    "Is grace": "是组织管理员",
+    "Is grace - Tooltip": "是用户所属组织的管理员",
     "Is deleted": "被删除",
     "Is deleted - Tooltip": "被软删除的用户只保留数据库记录，无法进行任何操作",
     "Is forbidden": "被禁用",

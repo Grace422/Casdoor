@@ -3,12 +3,12 @@ import React from "react";
 export const TourObj = {
   home: [
     {
-      title: "Welcome to casdoor",
-      description: "You can learn more about the use of CasDoor at https://casdoor.org/.",
+      title: "Welcome to Nzhinusoft",
+      description: "You can learn more about to use NzhinuConnect at https://nzhinusoft.com/",
       cover: (
         <img
-          alt="casdoor.png"
-          src="https://cdn.casbin.org/img/casdoor-logo_1185x256.png"
+          alt="Nzhinusoft"
+          src="https://nzhinusoft.com/assets/img/Nztrfinal.png"
         />
       ),
     },
@@ -134,7 +134,7 @@ export const TourObj = {
     },
     {
       title: "Permission Upload",
-      description: "With Casbin Online Editor, you can get Model and Policy files suitable for your usage scenarios. You can easily import the Model file into Casdoor through the Casdoor Web UI for use by the built-in Casbin. ",
+      description: "With Casbin Online Editor, you can get Model and Policy files suitable for your usage scenarios. You can easily import the Model file into Casdoor through the Casdoor Web UI for use by the Nzhinusoft Casbin. ",
       id: "upload-button",
     },
   ],

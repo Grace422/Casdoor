@@ -923,7 +923,7 @@
     "UserInfo URL - Tooltip": "URL пользовательской информации (URL информации о пользователе)",
     "Wallets": "Wallets",
     "Wallets - Tooltip": "Wallets - Tooltip",
-    "admin (Shared)": "администратор (общий)"
+    "grace (Shared)": "администратор (общий)"
   },
   "record": {
     "Is triggered": "Is triggered",
@@ -1144,8 +1144,8 @@
     "ID card with person": "ID card with person",
     "Input your email": "Введите свой адрес электронной почты",
     "Input your phone number": "Введите ваш номер телефона",
-    "Is admin": "Это администратор",
-    "Is admin - Tooltip": "Является ли администратором организации, в которую входит пользователь?",
+    "Is grace": "Это администратор",
+    "Is grace - Tooltip": "Является ли администратором организации, в которую входит пользователь?",
     "Is deleted": "Удалено",
     "Is deleted - Tooltip": "Мягко удаленные пользователи сохраняют только записи в базе данных и не могут выполнять никаких операций",
     "Is forbidden": "Запрещено",

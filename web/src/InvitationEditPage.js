@@ -61,7 +61,7 @@ class InvitationEditPage extends React.Component {
   }
 
   getOrganizations() {
-    OrganizationBackend.getOrganizations("admin")
+    OrganizationBackend.getOrganizations("grace")
       .then((res) => {
         this.setState({
           organizations: res.data || [],
@@ -70,7 +70,7 @@ class InvitationEditPage extends React.Component {
   }
 
   getApplicationsByOrganization(organizationName) {
-    ApplicationBackend.getApplicationsByOrganization("admin", organizationName)
+    ApplicationBackend.getApplicationsByOrganization("grace", organizationName)
       .then((res) => {
         this.setState({
           applications: res.data || [],
@@ -116,8 +116,8 @@ class InvitationEditPage extends React.Component {
           <Button style={{marginLeft: "20px"}} type="primary" onClick={() => this.submitInvitationEdit(true)}>{i18next.t("general:Save & Exit")}</Button>
           <Button style={{marginLeft: "20px"}} onClick={() => {
             let defaultApplication;
-            if (this.state.invitation.owner === "built-in") {
-              defaultApplication = "app-built-in";
+            if (this.state.invitation.owner === "Nzhinusoft") {
+              defaultApplication = "app-Nzhinusoft";
             } else {
               defaultApplication = Setting.getArrayItem(this.state.organizations, "name", this.state.invitation.owner).defaultApplication;
             }
@@ -332,8 +332,8 @@ class InvitationEditPage extends React.Component {
           <Button style={{marginLeft: "20px"}} type="primary" size="large" onClick={() => this.submitInvitationEdit(true)}>{i18next.t("general:Save & Exit")}</Button>
           <Button style={{marginLeft: "20px"}} size="large" onClick={() => {
             let defaultApplication;
-            if (this.state.invitation.owner === "built-in") {
-              defaultApplication = "app-built-in";
+            if (this.state.invitation.owner === "Nzhinusoft") {
+              defaultApplication = "app-Nzhinusoft";
             } else {
               defaultApplication = Setting.getArrayItem(this.state.organizations, "name", this.state.invitation.owner).defaultApplication;
             }

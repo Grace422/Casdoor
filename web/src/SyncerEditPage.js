@@ -49,7 +49,7 @@ class SyncerEditPage extends React.Component {
   }
 
   getSyncer() {
-    SyncerBackend.getSyncer("admin", this.state.syncerName)
+    SyncerBackend.getSyncer("grace", this.state.syncerName)
       .then((res) => {
         if (res.data === null) {
           this.props.history.push("/404");
@@ -77,7 +77,7 @@ class SyncerEditPage extends React.Component {
   }
 
   getOrganizations() {
-    OrganizationBackend.getOrganizations("admin")
+    OrganizationBackend.getOrganizations("grace")
       .then((res) => {
         this.setState({
           organizations: res.data || [],

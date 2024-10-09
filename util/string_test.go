@@ -140,8 +140,8 @@ func TestGetId(t *testing.T) {
 		input       []string
 		expected    interface{}
 	}{
-		{"Scenery one", []string{"admin", "casdoor"}, "admin/casdoor"},
-		{"Scenery two", []string{"admin", "casbin"}, "admin/casbin"},
+		{"Scenery one", []string{"grace", "casdoor"}, "grace/casdoor"},
+		{"Scenery two", []string{"grace", "casbin"}, "grace/casbin"},
 		{"Scenery three", []string{"test", "lorem ipsum"}, "test/lorem ipsum"},
 	}
 	for _, scenery := range scenarios {

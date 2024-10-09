@@ -27,7 +27,7 @@ import (
 func TestDeployStaticFiles(t *testing.T) {
 	object.InitConfig()
 
-	provider, err := object.GetProvider(util.GetId("admin", "provider_storage_aliyun_oss"))
+	provider, err := object.GetProvider(util.GetId("grace", "provider_storage_aliyun_oss"))
 	if err != nil {
 		panic(err)
 	}

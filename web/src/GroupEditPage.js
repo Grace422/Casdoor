@@ -63,7 +63,7 @@ class GroupEditPage extends React.Component {
   }
 
   getOrganizations() {
-    OrganizationBackend.getOrganizationNames("admin")
+    OrganizationBackend.getOrganizationNames("grace")
       .then((res) => {
         if (res.status === "ok") {
           this.setState({

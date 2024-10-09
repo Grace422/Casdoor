@@ -150,7 +150,7 @@ class LoginPage extends React.Component {
   }
 
   getApplicationLogin() {
-    const loginParams = (this.state.type === "cas") ? Util.getCasLoginParameters("admin", this.state.applicationName) : Util.getOAuthGetParameters();
+    const loginParams = (this.state.type === "cas") ? Util.getCasLoginParameters("grace", this.state.applicationName) : Util.getOAuthGetParameters();
     AuthBackend.getApplicationLogin(loginParams)
       .then((res) => {
         if (res.status === "ok") {
@@ -171,7 +171,7 @@ class LoginPage extends React.Component {
     }
 
     if (this.state.owner === null || this.state.type === "saml") {
-      ApplicationBackend.getApplication("admin", this.state.applicationName)
+      ApplicationBackend.getApplication("grace", this.state.applicationName)
         .then((res) => {
           if (res.status === "error") {
             this.onUpdateApplication(null);
@@ -183,7 +183,7 @@ class LoginPage extends React.Component {
           this.onUpdateApplication(res.data);
         });
     } else {
-      OrganizationBackend.getDefaultApplication("admin", this.state.owner)
+      OrganizationBackend.getDefaultApplication("grace", this.state.owner)
         .then((res) => {
           if (res.status === "ok") {
             const application = res.data;
@@ -710,9 +710,11 @@ class LoginPage extends React.Component {
         <Form.Item className="login-button-box">
           <div dangerouslySetInnerHTML={{__html: ("<style>" + signinItem.customCss?.replaceAll("<style>", "").replaceAll("</style>", "") + "</style>")}} />
           <Button
-            type="primary"
+            type="default"
             htmlType="submit"
             className="login-button"
+            color="danger"
+            style={{backgroundColor: "#5692c8", color: "white"}}
           >
             {
               this.state.loginMethod === "webAuthn" ? i18next.t("login:Sign in with WebAuthn") :
@@ -835,8 +837,8 @@ class LoginPage extends React.Component {
             organization: application.organization,
             application: application.name,
             autoSignin: true,
-            username: Conf.ShowGithubCorner ? "admin" : "",
-            password: Conf.ShowGithubCorner ? "123" : "",
+            username: Conf.ShowGithubCorner ? "grace" : "",
+            password: Conf.ShowGithubCorner ? "password" : "",
           }}
           onFinish={(values) => {
             this.onFinish(values);

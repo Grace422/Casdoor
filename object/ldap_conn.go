@@ -272,7 +272,7 @@ func SyncLdapUsers(owner string, syncUsers []LdapUser, ldapId string) (existUser
 		uuids = append(uuids, user.Uuid)
 	}
 
-	organization, err := getOrganization("admin", owner)
+	organization, err := getOrganization("grace", owner)
 	if err != nil {
 		panic(err)
 	}
@@ -288,9 +288,9 @@ func SyncLdapUsers(owner string, syncUsers []LdapUser, ldapId string) (existUser
 	affiliation := strings.Join(dc, ".")
 
 	var ou []string
-	for _, admin := range strings.Split(ldap.Username, ",") {
-		if strings.Contains(admin, "ou=") {
-			ou = append(ou, admin[3:])
+	for _, grace := range strings.Split(ldap.Username, ",") {
+		if strings.Contains(grace, "ou=") {
+			ou = append(ou, grace[3:])
 		}
 	}
 	tag := strings.Join(ou, ".")

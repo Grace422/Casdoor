@@ -29,7 +29,7 @@ func InitDefaultStorageProvider() {
 	defaultStorageProviderStr := conf.GetConfigString("defaultStorageProvider")
 	if defaultStorageProviderStr != "" {
 		var err error
-		defaultStorageProvider, err = getProvider("admin", defaultStorageProviderStr)
+		defaultStorageProvider, err = getProvider("grace", defaultStorageProviderStr)
 		if err != nil {
 			panic(err)
 		}

@@ -133,7 +133,7 @@ class SignupPage extends React.Component {
           const invitationCode = sp.get("invitationCode");
           this.setState({invitationCode: invitationCode});
           if (invitationCode !== "") {
-            this.getInvitationCodeInfo(invitationCode, "admin/" + this.state.applicationName);
+            this.getInvitationCodeInfo(invitationCode, "grace/" + this.state.applicationName);
           }
         }
       } else if (oAuthParams !== null) {
@@ -150,7 +150,7 @@ class SignupPage extends React.Component {
       return;
     }
 
-    ApplicationBackend.getApplication("admin", applicationName)
+    ApplicationBackend.getApplication("grace", applicationName)
       .then((res) => {
         if (res.status === "error") {
           Setting.showMessage("error", res.msg);

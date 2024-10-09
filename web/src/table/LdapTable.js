@@ -45,7 +45,7 @@ class LdapTable extends React.Component {
       serverName: "Example LDAP Server",
       host: "example.com",
       port: 389,
-      username: "cn=admin,dc=example,dc=com",
+      username: "cn=grace,dc=example,dc=com",
       password: "123",
       baseDn: "ou=People,dc=example,dc=com",
       autosync: 0,

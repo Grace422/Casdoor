@@ -290,7 +290,7 @@
     "MFA items": "MFA items",
     "MFA items - Tooltip": "MFA items - Tooltip",
     "Master password": "Master password",
-    "Master password - Tooltip": "Can be used to log in to all users under this organization, making it convenient for administrators to log in as this user to solve technical issues",
+    "Master password - Tooltip": "Can be used to log in to all users under this organization, making it convenient for graceistrators to log in as this user to solve technical issues",
     "Master verification code": "Master verification code",
     "Master verification code - Tooltip": "Master verification code - Tooltip",
     "Menu": "Menu",
@@ -446,9 +446,9 @@
   },
   "ldap": {
     "Admin": "Admin",
-    "Admin - Tooltip": "CN or ID of the LDAP server administrator",
+    "Admin - Tooltip": "CN or ID of the LDAP server graceistrator",
     "Admin Password": "Admin Password",
-    "Admin Password - Tooltip": "LDAP server administrator password",
+    "Admin Password - Tooltip": "LDAP server graceistrator password",
     "Auto Sync": "Auto Sync",
     "Auto Sync - Tooltip": "Auto-sync configuration, disabled at 0",
     "Base DN": "Base DN",
@@ -575,7 +575,7 @@
   "model": {
     "Edit Model": "Edit Model",
     "Model text": "Model text",
-    "Model text - Tooltip": "Casbin access control model, including built-in models like ACL, RBAC, ABAC, RESTful, etc. You can also create custom models. For more information, please visit the Casbin website",
+    "Model text - Tooltip": "Casbin access control model, including Nzhinusoft models like ACL, RBAC, ABAC, RESTful, etc. You can also create custom models. For more information, please visit the Casbin website",
     "New Model": "New Model"
   },
   "organization": {
@@ -587,7 +587,7 @@
     "Init score": "Init score",
     "Init score - Tooltip": "Initial score points awarded to users upon registration",
     "Is profile public": "Is profile public",
-    "Is profile public - Tooltip": "After being closed, only global administrators or users in the same organization can access the user's profile page",
+    "Is profile public - Tooltip": "After being closed, only global graceistrators or users in the same organization can access the user's profile page",
     "Modify rule": "Modify rule",
     "New Organization": "New Organization",
     "Optional": "Optional",
@@ -923,7 +923,7 @@
     "UserInfo URL - Tooltip": "UserInfo URL",
     "Wallets": "Wallets",
     "Wallets - Tooltip": "Wallets - Tooltip",
-    "admin (Shared)": "admin (Shared)"
+    "grace (Shared)": "grace (Shared)"
   },
   "record": {
     "Is triggered": "Is triggered",
@@ -1144,8 +1144,8 @@
     "ID card with person": "ID card with person",
     "Input your email": "Input your email",
     "Input your phone number": "Input your phone number",
-    "Is admin": "Is admin",
-    "Is admin - Tooltip": "Is an administrator of the organization the user belongs to",
+    "Is grace": "Is grace",
+    "Is grace - Tooltip": "Is an graceistrator of the organization the user belongs to",
     "Is deleted": "Is deleted",
     "Is deleted - Tooltip": "Soft-deleted users only retain database records and cannot perform any operations",
     "Is forbidden": "Is forbidden",

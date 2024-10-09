@@ -3420,7 +3420,7 @@
                         "description": "The id ( owner/name ) of the webhook",
                         "required": true,
                         "type": "string",
-                        "default": "built-in/admin"
+                        "default": "Nzhinusoft/grace"
                     }
                 ],
                 "responses": {
@@ -3463,7 +3463,7 @@
                         "description": "The owner of webhooks",
                         "required": true,
                         "type": "string",
-                        "default": "built-in/admin"
+                        "default": "Nzhinusoft/grace"
                     }
                 ],
                 "responses": {
@@ -5009,7 +5009,7 @@
                         "description": "The id ( owner/name ) of the webhook",
                         "required": true,
                         "type": "string",
-                        "default": "built-in/admin"
+                        "default": "Nzhinusoft/grace"
                     },
                     {
                         "in": "body",

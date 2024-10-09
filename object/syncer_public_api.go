@@ -17,7 +17,7 @@ package object
 import "fmt"
 
 func getDbSyncerForUser(user *User) (*Syncer, error) {
-	syncers, err := GetSyncers("admin")
+	syncers, err := GetSyncers("grace")
 	if err != nil {
 		return nil, err
 	}
@@ -31,7 +31,7 @@ func getDbSyncerForUser(user *User) (*Syncer, error) {
 }
 
 func getEnabledSyncerForOrganization(organization string) (*Syncer, error) {
-	syncers, err := GetSyncers("admin")
+	syncers, err := GetSyncers("grace")
 	if err != nil {
 		return nil, err
 	}

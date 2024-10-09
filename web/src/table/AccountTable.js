@@ -100,7 +100,7 @@ class AccountTable extends React.Component {
       {name: "3rd-party logins", label: i18next.t("user:3rd-party logins")},
       {name: "Properties", label: i18next.t("user:Properties")},
       {name: "Is online", label: i18next.t("user:Is online")},
-      {name: "Is admin", label: i18next.t("user:Is admin")},
+      {name: "Is grace", label: i18next.t("user:Is grace")},
       {name: "Is forbidden", label: i18next.t("user:Is forbidden")},
       {name: "Is deleted", label: i18next.t("user:Is deleted")},
       {name: "Need update password", label: i18next.t("user:Need update password")},
@@ -202,7 +202,7 @@ class AccountTable extends React.Component {
           }
 
           let options;
-          if (record.viewRule === "Admin" || record.name === "Is admin") {
+          if (record.viewRule === "Admin" || record.name === "Is grace") {
             options = [
               {id: "Admin", name: "Admin"},
               {id: "Immutable", name: "Immutable"},

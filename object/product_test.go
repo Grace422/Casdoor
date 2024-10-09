@@ -20,7 +20,7 @@ package object
 //func TestProduct(t *testing.T) {
 //	InitConfig()
 //
-//	product, _ := GetProduct("admin/product_123")
+//	product, _ := GetProduct("grace/product_123")
 //	provider, _ := getProvider(product.Owner, "provider_pay_alipay")
 //	cert, _ := getCert(product.Owner, "cert-pay-alipay")
 //	pProvider, err := pp.GetPaymentProvider(provider.Type, provider.ClientId, provider.ClientSecret, provider.Host, cert.Certificate, cert.PrivateKey, cert.AuthorityPublicKey, cert.AuthorityRootPublicKey, provider.ClientId2)

@@ -34,7 +34,7 @@ class PaymentListPage extends BaseListPage {
       displayName: `New Payment - ${randomName}`,
       provider: "provider_pay_paypal",
       type: "PayPal",
-      user: "admin",
+      user: "grace",
       productName: "computer-1",
       productDisplayName: "A notebook computer",
       detail: "This is a computer with excellent CPU, memory and disk",

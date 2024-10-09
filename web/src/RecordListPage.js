@@ -30,13 +30,13 @@ class RecordListPage extends BaseListPage {
 
   newRecord() {
     return {
-      owner: "built-in",
+      owner: "Nzhinusoft",
       name: "1234",
       id: "1234",
       clientIp: "::1",
       timestamp: moment().format(),
-      organization: "built-in",
-      username: "admin",
+      organization: "Nzhinusoft",
+      username: "grace",
       requestUri: "/api/get-account",
       action: "login",
       isTriggered: false,

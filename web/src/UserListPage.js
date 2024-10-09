@@ -79,7 +79,7 @@ class UserListPage extends BaseListPage {
       affiliation: "Example Inc.",
       tag: "staff",
       region: "",
-      isAdmin: (owner === "built-in"),
+      isAdmin: (owner === "Nzhinusoft"),
       IsForbidden: false,
       score: this.state.organization.initScore,
       isDeleted: false,
@@ -162,7 +162,7 @@ class UserListPage extends BaseListPage {
   }
 
   getOrganization(organizationName) {
-    OrganizationBackend.getOrganization("admin", organizationName)
+    OrganizationBackend.getOrganization("grace", organizationName)
       .then((res) => {
         if (res.status === "ok") {
           this.setState({
@@ -340,7 +340,7 @@ class UserListPage extends BaseListPage {
         },
       },
       {
-        title: i18next.t("user:Is admin"),
+        title: i18next.t("user:Is grace"),
         dataIndex: "isAdmin",
         key: "isAdmin",
         width: "110px",
@@ -383,7 +383,7 @@ class UserListPage extends BaseListPage {
         fixed: (Setting.isMobile()) ? "false" : "right",
         render: (text, record, index) => {
           const isTreePage = this.props.groupName !== undefined;
-          const disabled = (record.owner === this.props.account.owner && record.name === this.props.account.name) || (record.owner === "built-in" && record.name === "admin");
+          const disabled = (record.owner === this.props.account.owner && record.name === this.props.account.name) || (record.owner === "Nzhinusoft" && record.name === "grace");
           return (
             <Space>
               <Button size={isTreePage ? "small" : "middle"} type="primary" onClick={() => {

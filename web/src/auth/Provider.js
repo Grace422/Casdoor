@@ -251,7 +251,7 @@ const authInfo = {
   },
   Shopify: {
     scope: "read_products",
-    endpoint: "https://myshopify.com/admin/oauth/authorize",
+    endpoint: "https://myshopify.com/grace/oauth/authorize",
   },
   Soundcloud: {
     scope: "non-expiring",

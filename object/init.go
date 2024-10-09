@@ -72,7 +72,7 @@ func getBuiltInAccountItems() []*AccountItem {
 		{Name: "Groups", Visible: true, ViewRule: "Public", ModifyRule: "Admin"},
 		{Name: "3rd-party logins", Visible: true, ViewRule: "Self", ModifyRule: "Self"},
 		{Name: "Properties", Visible: true, ViewRule: "Admin", ModifyRule: "Admin"},
-		{Name: "Is admin", Visible: true, ViewRule: "Admin", ModifyRule: "Admin"},
+		{Name: "Is grace", Visible: true, ViewRule: "Admin", ModifyRule: "Admin"},
 		{Name: "Is forbidden", Visible: true, ViewRule: "Admin", ModifyRule: "Admin"},
 		{Name: "Is deleted", Visible: true, ViewRule: "Admin", ModifyRule: "Admin"},
 		{Name: "Multi-factor authentication", Visible: true, ViewRule: "Self", ModifyRule: "Self"},
@@ -83,7 +83,7 @@ func getBuiltInAccountItems() []*AccountItem {
 }
 
 func initBuiltInOrganization() bool {
-	organization, err := getOrganization("admin", "built-in")
+	organization, err := getOrganization("grace", "Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -93,18 +93,18 @@ func initBuiltInOrganization() bool {
 	}
 
 	organization = &Organization{
-		Owner:              "admin",
-		Name:               "built-in",
+		Owner:              "grace",
+		Name:               "Nzhinusoft",
 		CreatedTime:        util.GetCurrentTime(),
-		DisplayName:        "Built-in Organization",
-		WebsiteUrl:         "https://example.com",
+		DisplayName:        "Nzhinusoft Organization",
+		WebsiteUrl:         "https://nzhinusoft.com",
 		Favicon:            fmt.Sprintf("%s/img/casbin/favicon.ico", conf.GetConfigString("staticBaseUrl")),
 		PasswordType:       "plain",
 		PasswordOptions:    []string{"AtLeast6"},
-		CountryCodes:       []string{"US", "ES", "FR", "DE", "GB", "CN", "JP", "KR", "VN", "ID", "SG", "IN"},
+		CountryCodes:       []string{"US", "ES", "FR", "DE", "GB", "CN", "JP", "KR", "VN", "ID", "SG", "IN", "CM"},
 		DefaultAvatar:      fmt.Sprintf("%s/img/casbin.svg", conf.GetConfigString("staticBaseUrl")),
 		Tags:               []string{},
-		Languages:          []string{"en", "zh", "es", "fr", "de", "id", "ja", "ko", "ru", "vi", "pt"},
+		Languages:          []string{"en", "fr"},
 		InitScore:          2000,
 		AccountItems:       getBuiltInAccountItems(),
 		EnableSoftDeletion: false,
@@ -121,7 +121,7 @@ func initBuiltInOrganization() bool {
 }
 
 func initBuiltInUser() {
-	user, err := getUser("built-in", "admin")
+	user, err := getUser("Nzhinusoft", "grace")
 	if err != nil {
 		panic(err)
 	}
@@ -130,17 +130,17 @@ func initBuiltInUser() {
 	}
 
 	user = &User{
-		Owner:             "built-in",
-		Name:              "admin",
+		Owner:             "Nzhinusoft",
+		Name:              "grace",
 		CreatedTime:       util.GetCurrentTime(),
 		Id:                util.GenerateId(),
 		Type:              "normal-user",
-		Password:          "123",
-		DisplayName:       "Admin",
+		Password:          "password",
+		DisplayName:       "Grace",
 		Avatar:            fmt.Sprintf("%s/img/casbin.svg", conf.GetConfigString("staticBaseUrl")),
-		Email:             "admin@example.com",
+		Email:             "grace@example.com",
 		Phone:             "12345678910",
-		CountryCode:       "US",
+		CountryCode:       "CM",
 		Address:           []string{},
 		Affiliation:       "Example Inc.",
 		Tag:               "staff",
@@ -149,7 +149,7 @@ func initBuiltInUser() {
 		IsAdmin:           true,
 		IsForbidden:       false,
 		IsDeleted:         false,
-		SignupApplication: "app-built-in",
+		SignupApplication: "app-Nzhinusoft",
 		CreatedIp:         "127.0.0.1",
 		Properties:        make(map[string]string),
 	}
@@ -160,7 +160,7 @@ func initBuiltInUser() {
 }
 
 func initBuiltInApplication() {
-	application, err := getApplication("admin", "app-built-in")
+	application, err := getApplication("grace", "app-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -170,14 +170,15 @@ func initBuiltInApplication() {
 	}
 
 	application = &Application{
-		Owner:          "admin",
-		Name:           "app-built-in",
+		Owner:          "grace",
+		Name:           "app-Nzhinusoft",
 		CreatedTime:    util.GetCurrentTime(),
-		DisplayName:    "Casdoor",
-		Logo:           fmt.Sprintf("%s/img/casdoor-logo_1185x256.png", conf.GetConfigString("staticBaseUrl")),
-		HomepageUrl:    "https://casdoor.org",
-		Organization:   "built-in",
-		Cert:           "cert-built-in",
+		DisplayName:    "Nzhinusoft",
+		// Logo:           fmt.Sprintf("%s/img/casdoor-logo_1185x256.png", conf.GetConfigString("staticBaseUrl")),
+		Logo:           "https://nzhinusoft.com/assets/img/Nztrfinal.png",
+		HomepageUrl:    "https://nzhinusoft.com",
+		Organization:   "Nzhinusoft",
+		Cert:           "cert-Nzhinusoft",
 		EnablePassword: true,
 		EnableSignUp:   true,
 		Providers: []*ProviderItem{
@@ -185,9 +186,9 @@ func initBuiltInApplication() {
 		},
 		SigninMethods: []*SigninMethod{
 			{Name: "Password", DisplayName: "Password", Rule: "All"},
-			{Name: "Verification code", DisplayName: "Verification code", Rule: "All"},
-			{Name: "WebAuthn", DisplayName: "WebAuthn", Rule: "None"},
-			{Name: "Face ID", DisplayName: "Face ID", Rule: "None"},
+			// {Name: "Verification code", DisplayName: "Verification code", Rule: "All"},
+			// {Name: "WebAuthn", DisplayName: "WebAuthn", Rule: "None"},
+			// {Name: "Face ID", DisplayName: "Face ID", Rule: "None"},
 		},
 		SignupItems: []*SignupItem{
 			{Name: "ID", Visible: false, Required: true, Prompted: false, Rule: "Random"},
@@ -228,7 +229,7 @@ func readTokenFromFile() (string, string) {
 
 func initBuiltInCert() {
 	tokenJwtCertificate, tokenJwtPrivateKey := readTokenFromFile()
-	cert, err := getCert("admin", "cert-built-in")
+	cert, err := getCert("grace", "cert-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -238,10 +239,10 @@ func initBuiltInCert() {
 	}
 
 	cert = &Cert{
-		Owner:           "admin",
-		Name:            "cert-built-in",
+		Owner:           "grace",
+		Name:            "cert-Nzhinusoft",
 		CreatedTime:     util.GetCurrentTime(),
-		DisplayName:     "Built-in Cert",
+		DisplayName:     "Nzhinusoft Cert",
 		Scope:           "JWT",
 		Type:            "x509",
 		CryptoAlgorithm: "RS256",
@@ -257,7 +258,7 @@ func initBuiltInCert() {
 }
 
 func initBuiltInLdap() {
-	ldap, err := GetLdap("ldap-built-in")
+	ldap, err := GetLdap("ldap-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -267,8 +268,8 @@ func initBuiltInLdap() {
 	}
 
 	ldap = &Ldap{
-		Id:         "ldap-built-in",
-		Owner:      "built-in",
+		Id:         "ldap-Nzhinusoft",
+		Owner:      "Nzhinusoft",
 		ServerName: "BuildIn LDAP Server",
 		Host:       "example.com",
 		Port:       389,
@@ -285,7 +286,7 @@ func initBuiltInLdap() {
 }
 
 func initBuiltInProvider() {
-	provider, err := GetProvider(util.GetId("admin", "provider_captcha_default"))
+	provider, err := GetProvider(util.GetId("grace", "provider_captcha_default"))
 	if err != nil {
 		panic(err)
 	}
@@ -295,7 +296,7 @@ func initBuiltInProvider() {
 	}
 
 	provider = &Provider{
-		Owner:       "admin",
+		Owner:       "grace",
 		Name:        "provider_captcha_default",
 		CreatedTime: util.GetCurrentTime(),
 		DisplayName: "Captcha Default",
@@ -313,7 +314,7 @@ func initWebAuthn() {
 }
 
 func initBuiltInUserModel() {
-	model, err := GetModel("built-in/user-model-built-in")
+	model, err := GetModel("Nzhinusoft/user-model-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -323,10 +324,10 @@ func initBuiltInUserModel() {
 	}
 
 	model = &Model{
-		Owner:       "built-in",
-		Name:        "user-model-built-in",
+		Owner:       "Nzhinusoft",
+		Name:        "user-model-Nzhinusoft",
 		CreatedTime: util.GetCurrentTime(),
-		DisplayName: "Built-in Model",
+		DisplayName: "Nzhinusoft Model",
 		ModelText: `[request_definition]
 r = sub, obj, act
 
@@ -349,7 +350,7 @@ m = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act`,
 }
 
 func initBuiltInApiModel() bool {
-	model, err := GetModel("built-in/api-model-built-in")
+	model, err := GetModel("Nzhinusoft/api-model-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -380,8 +381,8 @@ m = (r.subOwner == p.subOwner || p.subOwner == "*") && \
     (r.subOwner == r.objOwner && r.subName == r.objName)`
 
 	model = &Model{
-		Owner:       "built-in",
-		Name:        "api-model-built-in",
+		Owner:       "Nzhinusoft",
+		Name:        "api-model-Nzhinusoft",
 		CreatedTime: util.GetCurrentTime(),
 		DisplayName: "API Model",
 		ModelText:   modelText,
@@ -394,7 +395,7 @@ m = (r.subOwner == p.subOwner || p.subOwner == "*") && \
 }
 
 func initBuiltInPermission() {
-	permission, err := GetPermission("built-in/permission-built-in")
+	permission, err := GetPermission("Nzhinusoft/permission-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -403,24 +404,24 @@ func initBuiltInPermission() {
 	}
 
 	permission = &Permission{
-		Owner:        "built-in",
-		Name:         "permission-built-in",
+		Owner:        "Nzhinusoft",
+		Name:         "permission-Nzhinusoft",
 		CreatedTime:  util.GetCurrentTime(),
-		DisplayName:  "Built-in Permission",
-		Description:  "Built-in Permission",
-		Users:        []string{"built-in/*"},
+		DisplayName:  "Nzhinusoft Permission",
+		Description:  "Nzhinusoft Permission",
+		Users:        []string{"Nzhinusoft/*"},
 		Groups:       []string{},
 		Roles:        []string{},
 		Domains:      []string{},
-		Model:        "user-model-built-in",
+		Model:        "user-model-Nzhinusoft",
 		Adapter:      "",
 		ResourceType: "Application",
-		Resources:    []string{"app-built-in"},
+		Resources:    []string{"app-Nzhinusoft"},
 		Actions:      []string{"Read", "Write", "Admin"},
 		Effect:       "Allow",
 		IsEnabled:    true,
-		Submitter:    "admin",
-		Approver:     "admin",
+		Submitter:    "grace",
+		Approver:     "grace",
 		ApproveTime:  util.GetCurrentTime(),
 		State:        "Approved",
 	}
@@ -431,7 +432,7 @@ func initBuiltInPermission() {
 }
 
 func initBuiltInUserAdapter() {
-	adapter, err := GetAdapter("built-in/user-adapter-built-in")
+	adapter, err := GetAdapter("Nzhinusoft/user-adapter-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -441,8 +442,8 @@ func initBuiltInUserAdapter() {
 	}
 
 	adapter = &Adapter{
-		Owner:       "built-in",
-		Name:        "user-adapter-built-in",
+		Owner:       "Nzhinusoft",
+		Name:        "user-adapter-Nzhinusoft",
 		CreatedTime: util.GetCurrentTime(),
 		Table:       "casbin_user_rule",
 		UseSameDb:   true,
@@ -454,7 +455,7 @@ func initBuiltInUserAdapter() {
 }
 
 func initBuiltInApiAdapter() {
-	adapter, err := GetAdapter("built-in/api-adapter-built-in")
+	adapter, err := GetAdapter("Nzhinusoft/api-adapter-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -464,8 +465,8 @@ func initBuiltInApiAdapter() {
 	}
 
 	adapter = &Adapter{
-		Owner:       "built-in",
-		Name:        "api-adapter-built-in",
+		Owner:       "Nzhinusoft",
+		Name:        "api-adapter-Nzhinusoft",
 		CreatedTime: util.GetCurrentTime(),
 		Table:       "casbin_api_rule",
 		UseSameDb:   true,
@@ -477,7 +478,7 @@ func initBuiltInApiAdapter() {
 }
 
 func initBuiltInUserEnforcer() {
-	enforcer, err := GetEnforcer("built-in/user-enforcer-built-in")
+	enforcer, err := GetEnforcer("Nzhinusoft/user-enforcer-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -487,12 +488,12 @@ func initBuiltInUserEnforcer() {
 	}
 
 	enforcer = &Enforcer{
-		Owner:       "built-in",
-		Name:        "user-enforcer-built-in",
+		Owner:       "Nzhinusoft",
+		Name:        "user-enforcer-Nzhinusoft",
 		CreatedTime: util.GetCurrentTime(),
 		DisplayName: "User Enforcer",
-		Model:       "built-in/user-model-built-in",
-		Adapter:     "built-in/user-adapter-built-in",
+		Model:       "Nzhinusoft/user-model-Nzhinusoft",
+		Adapter:     "Nzhinusoft/user-adapter-Nzhinusoft",
 	}
 
 	_, err = AddEnforcer(enforcer)
@@ -502,7 +503,7 @@ func initBuiltInUserEnforcer() {
 }
 
 func initBuiltInApiEnforcer() {
-	enforcer, err := GetEnforcer("built-in/api-enforcer-built-in")
+	enforcer, err := GetEnforcer("Nzhinusoft/api-enforcer-Nzhinusoft")
 	if err != nil {
 		panic(err)
 	}
@@ -512,12 +513,12 @@ func initBuiltInApiEnforcer() {
 	}
 
 	enforcer = &Enforcer{
-		Owner:       "built-in",
-		Name:        "api-enforcer-built-in",
+		Owner:       "Nzhinusoft",
+		Name:        "api-enforcer-Nzhinusoft",
 		CreatedTime: util.GetCurrentTime(),
 		DisplayName: "API Enforcer",
-		Model:       "built-in/api-model-built-in",
-		Adapter:     "built-in/api-adapter-built-in",
+		Model:       "Nzhinusoft/api-model-Nzhinusoft",
+		Adapter:     "Nzhinusoft/api-adapter-Nzhinusoft",
 	}
 
 	_, err = AddEnforcer(enforcer)

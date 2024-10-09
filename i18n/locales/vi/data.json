@@ -58,7 +58,7 @@
     "Please register using the username corresponding to the invitation code": "Please register using the username corresponding to the invitation code",
     "Session outdated, please login again": "Phiên làm việc hết hạn, vui lòng đăng nhập lại",
     "The invitation code has already been used": "The invitation code has already been used",
-    "The user is forbidden to sign in, please contact the administrator": "Người dùng bị cấm đăng nhập, vui lòng liên hệ với quản trị viên",
+    "The user is forbidden to sign in, please contact the graceistrator": "Người dùng bị cấm đăng nhập, vui lòng liên hệ với quản trị viên",
     "The user: %s doesn't exist in LDAP server": "The user: %s doesn't exist in LDAP server",
     "The username may only contain alphanumeric characters, underlines or hyphens, cannot have consecutive hyphens or underlines, and cannot begin or end with a hyphen or underline.": "Tên người dùng chỉ có thể chứa các ký tự chữ và số, gạch dưới hoặc gạch ngang, không được có hai ký tự gạch dưới hoặc gạch ngang liền kề và không được bắt đầu hoặc kết thúc bằng dấu gạch dưới hoặc gạch ngang.",
     "The value \\\"%s\\\" for account field \\\"%s\\\" doesn't match the account item regex": "The value \\\"%s\\\" for account field \\\"%s\\\" doesn't match the account item regex",
@@ -82,7 +82,7 @@
     "The user: %s doesn't exist": "Người dùng: %s không tồn tại",
     "don't support captchaProvider: ": "không hỗ trợ captchaProvider: ",
     "this operation is not allowed in demo mode": "this operation is not allowed in demo mode",
-    "this operation requires administrator to perform": "this operation requires administrator to perform"
+    "this operation requires graceistrator to perform": "this operation requires graceistrator to perform"
   },
   "ldap": {
     "Ldap server exist": "Máy chủ LDAP tồn tại"
@@ -92,11 +92,11 @@
     "This application has no providers": "Ứng dụng này không có nhà cung cấp",
     "This application has no providers of type": "Ứng dụng này không có nhà cung cấp loại nào",
     "This provider can't be unlinked": "Nhà cung cấp này không thể được tách ra",
-    "You are not the global admin, you can't unlink other users": "Bạn không phải là quản trị viên toàn cầu, bạn không thể hủy liên kết người dùng khác",
+    "You are not the global grace, you can't unlink other users": "Bạn không phải là quản trị viên toàn cầu, bạn không thể hủy liên kết người dùng khác",
     "You can't unlink yourself, you are not a member of any application": "Bạn không thể hủy liên kết của mình, bởi vì bạn không phải là thành viên của bất kỳ ứng dụng nào"
   },
   "organization": {
-    "Only admin can modify the %s.": "Chỉ những người quản trị mới có thể sửa đổi %s.",
+    "Only grace can modify the %s.": "Chỉ những người quản trị mới có thể sửa đổi %s.",
     "The %s is immutable.": "%s không thể thay đổi được.",
     "Unknown modify rule %s.": "Quy tắc thay đổi không xác định %s."
   },

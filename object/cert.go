@@ -58,12 +58,12 @@ func GetMaskedCerts(certs []*Cert, err error) ([]*Cert, error) {
 
 func GetCertCount(owner, field, value string) (int64, error) {
 	session := GetSession("", -1, -1, field, value, "", "")
-	return session.Where("owner = ? or owner = ? ", "admin", owner).Count(&Cert{})
+	return session.Where("owner = ? or owner = ? ", "grace", owner).Count(&Cert{})
 }
 
 func GetCerts(owner string) ([]*Cert, error) {
 	certs := []*Cert{}
-	err := ormer.Engine.Where("owner = ? or owner = ? ", "admin", owner).Desc("created_time").Find(&certs, &Cert{})
+	err := ormer.Engine.Where("owner = ? or owner = ? ", "grace", owner).Desc("created_time").Find(&certs, &Cert{})
 	if err != nil {
 		return certs, err
 	}
@@ -74,7 +74,7 @@ func GetCerts(owner string) ([]*Cert, error) {
 func GetPaginationCerts(owner string, offset, limit int, field, value, sortField, sortOrder string) ([]*Cert, error) {
 	certs := []*Cert{}
 	session := GetSession("", offset, limit, field, value, sortField, sortOrder)
-	err := session.Where("owner = ? or owner = ? ", "admin", owner).Find(&certs)
+	err := session.Where("owner = ? or owner = ? ", "grace", owner).Find(&certs)
 	if err != nil {
 		return certs, err
 	}
@@ -252,7 +252,7 @@ func getCertByApplication(application *Application) (*Cert, error) {
 }
 
 func GetDefaultCert() (*Cert, error) {
-	return getCert("admin", "cert-built-in")
+	return getCert("grace", "cert-Nzhinusoft")
 }
 
 func certChangeTrigger(oldName string, newName string) error {

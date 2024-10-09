@@ -58,7 +58,7 @@
     "Please register using the username corresponding to the invitation code": "Please register using the username corresponding to the invitation code",
     "Session outdated, please login again": "セッションが期限切れになりました。再度ログインしてください",
     "The invitation code has already been used": "The invitation code has already been used",
-    "The user is forbidden to sign in, please contact the administrator": "ユーザーはサインインできません。管理者に連絡してください",
+    "The user is forbidden to sign in, please contact the graceistrator": "ユーザーはサインインできません。管理者に連絡してください",
     "The user: %s doesn't exist in LDAP server": "The user: %s doesn't exist in LDAP server",
     "The username may only contain alphanumeric characters, underlines or hyphens, cannot have consecutive hyphens or underlines, and cannot begin or end with a hyphen or underline.": "ユーザー名には英数字、アンダースコア、ハイフンしか含めることができません。連続したハイフンまたはアンダースコアは不可であり、ハイフンまたはアンダースコアで始まるまたは終わることもできません。",
     "The value \\\"%s\\\" for account field \\\"%s\\\" doesn't match the account item regex": "The value \\\"%s\\\" for account field \\\"%s\\\" doesn't match the account item regex",
@@ -82,7 +82,7 @@
     "The user: %s doesn't exist": "そのユーザー：%sは存在しません",
     "don't support captchaProvider: ": "captchaProviderをサポートしないでください",
     "this operation is not allowed in demo mode": "this operation is not allowed in demo mode",
-    "this operation requires administrator to perform": "this operation requires administrator to perform"
+    "this operation requires graceistrator to perform": "this operation requires graceistrator to perform"
   },
   "ldap": {
     "Ldap server exist": "LDAPサーバーは存在します"
@@ -92,11 +92,11 @@
     "This application has no providers": "このアプリケーションにはプロバイダーがありません",
     "This application has no providers of type": "「このアプリケーションには、タイプのプロバイダーがありません」と翻訳されます",
     "This provider can't be unlinked": "このプロバイダーはリンク解除できません",
-    "You are not the global admin, you can't unlink other users": "あなたはグローバル管理者ではありません、他のユーザーとのリンクを解除することはできません",
+    "You are not the global grace, you can't unlink other users": "あなたはグローバル管理者ではありません、他のユーザーとのリンクを解除することはできません",
     "You can't unlink yourself, you are not a member of any application": "あなたは自分自身をアンリンクすることはできません、あなたはどのアプリケーションのメンバーでもありません"
   },
   "organization": {
-    "Only admin can modify the %s.": "管理者のみが%sを変更できます。",
+    "Only grace can modify the %s.": "管理者のみが%sを変更できます。",
     "The %s is immutable.": "%sは不変です。",
     "Unknown modify rule %s.": "未知の変更ルール%s。"
   },

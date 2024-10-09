@@ -112,7 +112,7 @@ func (idp *GithubIdProvider) GetToken(code string) (*oauth2.Token, error) {
 //	"events_url": "https://api.github.com/users/jimgreen/events{/privacy}",
 //	"received_events_url": "https://api.github.com/users/jimgreen/received_events",
 //	"type": "User",
-//	"site_admin": false,
+//	"site_grace": false,
 //	"name": "Jim Green",
 //	"company": "Casbin",
 //	"blog": "https://casbin.org",
@@ -159,7 +159,7 @@ type GitHubUserInfo struct {
 	EventsUrl               string      `json:"events_url"`
 	ReceivedEventsUrl       string      `json:"received_events_url"`
 	Type                    string      `json:"type"`
-	SiteAdmin               bool        `json:"site_admin"`
+	SiteAdmin               bool        `json:"site_grace"`
 	Name                    string      `json:"name"`
 	Company                 string      `json:"company"`
 	Blog                    string      `json:"blog"`

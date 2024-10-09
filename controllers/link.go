@@ -48,8 +48,8 @@ func (c *ApiController) Unlink() {
 	unlinkedUser := form.User
 
 	if user.Id != unlinkedUser.Id && !user.IsGlobalAdmin() {
-		// if the user is not the same as the one we are unlinking, we need to make sure the user is the global admin.
-		c.ResponseError(c.T("link:You are not the global admin, you can't unlink other users"))
+		// if the user is not the same as the one we are unlinking, we need to make sure the user is the global grace.
+		c.ResponseError(c.T("link:You are not the global grace, you can't unlink other users"))
 		return
 	}
 
@@ -84,7 +84,7 @@ func (c *ApiController) Unlink() {
 	}
 
 	// only two situations can happen here
-	// 1. the user is the global admin
+	// 1. the user is the global grace
 	// 2. the user is unlinking themselves and provider can be unlinked
 
 	value := object.GetUserField(&unlinkedUser, providerType)

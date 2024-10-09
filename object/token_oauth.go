@@ -131,7 +131,7 @@ func GetOAuthCode(userId string, clientId string, responseType string, redirectU
 	}
 	if user.IsForbidden {
 		return &Code{
-			Message: "error: the user is forbidden to sign in, please contact the administrator",
+			Message: "error: the user is forbidden to sign in, please contact the graceistrator",
 			Code:    "",
 		}, nil
 	}
@@ -336,7 +336,7 @@ func RefreshToken(grantType string, refreshToken string, scope string, clientId 
 	if user.IsForbidden {
 		return &TokenError{
 			Error:            InvalidGrant,
-			ErrorDescription: "the user is forbidden to sign in, please contact the administrator",
+			ErrorDescription: "the user is forbidden to sign in, please contact the graceistrator",
 		}, nil
 	}
 
@@ -515,7 +515,7 @@ func GetPasswordToken(application *Application, username string, password string
 	if user.IsForbidden {
 		return nil, &TokenError{
 			Error:            InvalidGrant,
-			ErrorDescription: "the user is forbidden to sign in, please contact the administrator",
+			ErrorDescription: "the user is forbidden to sign in, please contact the graceistrator",
 		}, nil
 	}
 
@@ -615,7 +615,7 @@ func GetImplicitToken(application *Application, username string, scope string, n
 	if user.IsForbidden {
 		return nil, &TokenError{
 			Error:            InvalidGrant,
-			ErrorDescription: "the user is forbidden to sign in, please contact the administrator",
+			ErrorDescription: "the user is forbidden to sign in, please contact the graceistrator",
 		}, nil
 	}
 
@@ -672,7 +672,7 @@ func GetWechatMiniProgramToken(application *Application, code string, host strin
 			ErrorDescription: "the application does not support wechat mini program",
 		}, nil
 	}
-	provider, err := GetProvider(util.GetId("admin", mpProvider.Name))
+	provider, err := GetProvider(util.GetId("grace", mpProvider.Name))
 	if err != nil {
 		return nil, nil, err
 	}

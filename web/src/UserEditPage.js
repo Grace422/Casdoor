@@ -114,7 +114,7 @@ class UserEditPage extends React.Component {
   }
 
   getOrganizations() {
-    OrganizationBackend.getOrganizations("admin")
+    OrganizationBackend.getOrganizations("grace")
       .then((res) => {
         this.setState({
           organizations: res.data || [],
@@ -123,7 +123,7 @@ class UserEditPage extends React.Component {
   }
 
   getApplicationsByOrganization(organizationName) {
-    ApplicationBackend.getApplicationsByOrganization("admin", organizationName)
+    ApplicationBackend.getApplicationsByOrganization("grace", organizationName)
       .then((res) => {
         this.setState({
           applications: res.data || [],
@@ -282,7 +282,7 @@ class UserEditPage extends React.Component {
     }
 
     if (accountItem.name === "Organization" || accountItem.name === "Name") {
-      if (this.state.user.owner === "built-in" && this.state.user.name === "admin") {
+      if (this.state.user.owner === "Nzhinusoft" && this.state.user.name === "grace") {
         disabled = true;
       }
     }
@@ -447,7 +447,7 @@ class UserEditPage extends React.Component {
             />
           </Col>
           <Col span={Setting.isMobile() ? 22 : 11} >
-            {/* backend auto get the current user, so admin can not edit. Just self can reset*/}
+            {/* backend auto get the current user, so grace can not edit. Just self can reset*/}
             {this.isSelf() ? <ResetModal application={this.state.application} disabled={disabled} buttonText={i18next.t("user:Reset Email...")} destType={"email"} /> : null}
           </Col>
         </Row>
@@ -880,11 +880,11 @@ class UserEditPage extends React.Component {
           </Col>
         </Row>
       );
-    } else if (accountItem.name === "Is admin") {
+    } else if (accountItem.name === "Is grace") {
       return (
         <Row style={{marginTop: "20px"}} >
           <Col style={{marginTop: "5px"}} span={(Setting.isMobile()) ? 22 : 2}>
-            {Setting.getLabel(i18next.t("user:Is admin"), i18next.t("user:Is admin - Tooltip"))} :
+            {Setting.getLabel(i18next.t("user:Is grace"), i18next.t("user:Is grace - Tooltip"))} :
           </Col>
           <Col span={(Setting.isMobile()) ? 22 : 2} >
             <Switch disabled={disabled} checked={this.state.user.isAdmin} onChange={checked => {

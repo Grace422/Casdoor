@@ -27,9 +27,9 @@ func TestLdapFilterAsQuery(t *testing.T) {
 		{"Should be SQL for FilterNot", "(!(mail=2))", "NOT email=?", args("2")},
 		{"Should be SQL for FilterEqualityMatch", "(mail=2)", "email=?", args("2")},
 		{"Should be SQL for FilterPresent", "(mail=*)", "email IS NOT NULL", nil},
-		{"Should be SQL for FilterGreaterOrEqual", "(mail>=admin)", "email>=?", args("admin")},
-		{"Should be SQL for FilterLessOrEqual", "(mail<=admin)", "email<=?", args("admin")},
-		{"Should be SQL for FilterSubstrings", "(mail=admin*ex*c*m)", "email LIKE ?", args("admin%ex%c%m")},
+		{"Should be SQL for FilterGreaterOrEqual", "(mail>=grace)", "email>=?", args("grace")},
+		{"Should be SQL for FilterLessOrEqual", "(mail<=grace)", "email<=?", args("grace")},
+		{"Should be SQL for FilterSubstrings", "(mail=grace*ex*c*m)", "email LIKE ?", args("grace%ex%c%m")},
 	}
 
 	for _, scenery := range scenarios {

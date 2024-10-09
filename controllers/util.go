@@ -140,12 +140,12 @@ func (c *ApiController) RequireAdmin() (string, bool) {
 		return "", false
 	}
 
-	if user.Owner == "built-in" {
+	if user.Owner == "Nzhinusoft" {
 		return "", true
 	}
 
 	if !user.IsAdmin {
-		c.ResponseError(c.T("general:this operation requires administrator to perform"))
+		c.ResponseError(c.T("general:this operation requires graceistrator to perform"))
 		return "", false
 	}
 
@@ -222,7 +222,7 @@ func (c *ApiController) GetProviderFromContext(category string) (*object.Provide
 	}
 
 	if providerName != "" {
-		provider, err := object.GetProvider(util.GetId("admin", providerName))
+		provider, err := object.GetProvider(util.GetId("grace", providerName))
 		if err != nil {
 			return nil, err
 		}

@@ -185,7 +185,7 @@ func DeleteGroup(group *Group) (bool, error) {
 }
 
 func checkGroupName(name string) error {
-	exist, err := ormer.Engine.Exist(&Organization{Owner: "admin", Name: name})
+	exist, err := ormer.Engine.Exist(&Organization{Owner: "grace", Name: name})
 	if err != nil {
 		return err
 	}

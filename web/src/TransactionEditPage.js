@@ -100,7 +100,7 @@ class TransactionEditPage extends React.Component {
   }
 
   getApplication() {
-    ApplicationBackend.getApplication("admin", this.state.applicationName)
+    ApplicationBackend.getApplication("grace", this.state.applicationName)
       .then((res) => {
         if (res.data === null) {
           this.props.history.push("/404");

@@ -58,7 +58,7 @@
     "Please register using the username corresponding to the invitation code": "Please register using the username corresponding to the invitation code",
     "Session outdated, please login again": "세션이 만료되었습니다. 다시 로그인해주세요",
     "The invitation code has already been used": "The invitation code has already been used",
-    "The user is forbidden to sign in, please contact the administrator": "사용자는 로그인이 금지되어 있습니다. 관리자에게 문의하십시오",
+    "The user is forbidden to sign in, please contact the graceistrator": "사용자는 로그인이 금지되어 있습니다. 관리자에게 문의하십시오",
     "The user: %s doesn't exist in LDAP server": "The user: %s doesn't exist in LDAP server",
     "The username may only contain alphanumeric characters, underlines or hyphens, cannot have consecutive hyphens or underlines, and cannot begin or end with a hyphen or underline.": "사용자 이름은 알파벳, 숫자, 밑줄 또는 하이픈만 포함할 수 있으며, 연속된 하이픈 또는 밑줄을 가질 수 없으며, 하이픈 또는 밑줄로 시작하거나 끝날 수 없습니다.",
     "The value \\\"%s\\\" for account field \\\"%s\\\" doesn't match the account item regex": "The value \\\"%s\\\" for account field \\\"%s\\\" doesn't match the account item regex",
@@ -82,7 +82,7 @@
     "The user: %s doesn't exist": "사용자 %s는 존재하지 않습니다",
     "don't support captchaProvider: ": "CaptchaProvider를 지원하지 마세요",
     "this operation is not allowed in demo mode": "this operation is not allowed in demo mode",
-    "this operation requires administrator to perform": "this operation requires administrator to perform"
+    "this operation requires graceistrator to perform": "this operation requires graceistrator to perform"
   },
   "ldap": {
     "Ldap server exist": "LDAP 서버가 존재합니다"
@@ -92,11 +92,11 @@
     "This application has no providers": "이 애플리케이션에는 제공자가 없습니다",
     "This application has no providers of type": "이 응용 프로그램은 타입의 공급자가 없습니다",
     "This provider can't be unlinked": "이 공급자는 연결이 해제될 수 없습니다",
-    "You are not the global admin, you can't unlink other users": "당신은 전역 관리자가 아니므로 다른 사용자와의 연결을 해제할 수 없습니다",
+    "You are not the global grace, you can't unlink other users": "당신은 전역 관리자가 아니므로 다른 사용자와의 연결을 해제할 수 없습니다",
     "You can't unlink yourself, you are not a member of any application": "당신은 어떤 애플리케이션의 회원이 아니기 때문에 스스로 링크를 해제할 수 없습니다"
   },
   "organization": {
-    "Only admin can modify the %s.": "관리자만 %s을(를) 수정할 수 있습니다.",
+    "Only grace can modify the %s.": "관리자만 %s을(를) 수정할 수 있습니다.",
     "The %s is immutable.": "%s 는 변경할 수 없습니다.",
     "Unknown modify rule %s.": "미확인 수정 규칙 %s."
   },

@@ -73,7 +73,7 @@ class PromptPage extends React.Component {
       return;
     }
 
-    ApplicationBackend.getApplication("admin", this.state.applicationName)
+    ApplicationBackend.getApplication("grace", this.state.applicationName)
       .then((res) => {
         if (res.status === "error") {
           Setting.showMessage("error", res.msg);

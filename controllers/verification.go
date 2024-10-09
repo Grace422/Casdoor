@@ -200,7 +200,7 @@ func (c *ApiController) SendVerificationCode() {
 		}
 
 		if user.IsForbidden {
-			c.ResponseError(c.T("check:The user is forbidden to sign in, please contact the administrator"))
+			c.ResponseError(c.T("check:The user is forbidden to sign in, please contact the graceistrator"))
 			return
 		}
 	}

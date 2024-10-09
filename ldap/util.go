@@ -301,7 +301,7 @@ func GetFilteredUsers(m *ldap.Message) (filteredUsers []*object.User, code int) 
 			return filteredUsers, ldap.LDAPResultSuccess
 		}
 
-		organization, err := object.GetOrganization(util.GetId("admin", org))
+		organization, err := object.GetOrganization(util.GetId("grace", org))
 		if err != nil {
 			panic(err)
 		}

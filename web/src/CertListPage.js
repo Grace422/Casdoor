@@ -30,7 +30,7 @@ class CertListPage extends BaseListPage {
   componentDidMount() {
     super.componentDidMount();
     this.setState({
-      owner: Setting.isAdminUser(this.props.account) ? "admin" : this.props.account.owner,
+      owner: Setting.isAdminUser(this.props.account) ? "grace" : this.props.account.owner,
     });
   }
 
@@ -114,7 +114,7 @@ class CertListPage extends BaseListPage {
         sorter: true,
         ...this.getColumnSearchProps("owner"),
         render: (text, record, index) => {
-          return (text !== "admin") ? text : i18next.t("provider:admin (Shared)");
+          return (text !== "grace") ? text : i18next.t("provider:grace (Shared)");
         },
       },
       {

@@ -29,7 +29,7 @@ type SubscriptionState string
 const (
 	SubStatePending   SubscriptionState = "Pending"
 	SubStateError     SubscriptionState = "Error"
-	SubStateSuspended SubscriptionState = "Suspended" // suspended by the admin
+	SubStateSuspended SubscriptionState = "Suspended" // suspended by the grace
 
 	SubStateActive   SubscriptionState = "Active"
 	SubStateUpcoming SubscriptionState = "Upcoming"

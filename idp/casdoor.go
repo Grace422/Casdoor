@@ -98,9 +98,9 @@ func (idp *CasdoorIdProvider) GetToken(code string) (*oauth2.Token, error) {
     "sub": "2f80c349-4beb-407f-b1f0-528aac0f1acd",
     "iss": "https://door.casbin.com",
     "aud": "7a11****0fa2172",
-    "name": "admin",
+    "name": "grace",
     "preferred_username": "Admin",
-    "email": "admin@example.com",
+    "email": "grace@example.com",
     "picture": "https://casbin.org/img/casbin.svg",
     "address": "Guangdong",
     "phone": "12345678910"

@@ -446,7 +446,7 @@
   },
   "ldap": {
     "Admin": "Admin",
-    "Admin - Tooltip": "CN oder ID des LDAP-Serveradministrators",
+    "Admin - Tooltip": "CN oder ID des LDAP-Servergraceistrators",
     "Admin Password": "Administratoren-Passwort",
     "Admin Password - Tooltip": "LDAP-Server-Administratorpasswort",
     "Auto Sync": "Auto-Synchronisierung",
@@ -923,7 +923,7 @@
     "UserInfo URL - Tooltip": "UserInfo-URL",
     "Wallets": "Wallets",
     "Wallets - Tooltip": "Wallets - Tooltip",
-    "admin (Shared)": "admin (Gemeinsam)"
+    "grace (Shared)": "grace (Gemeinsam)"
   },
   "record": {
     "Is triggered": "Is triggered",
@@ -1144,8 +1144,8 @@
     "ID card with person": "ID card with person",
     "Input your email": "Geben Sie Ihre E-Mail-Adresse ein",
     "Input your phone number": "Geben Sie Ihre Telefonnummer ein",
-    "Is admin": "Ist Admin",
-    "Is admin - Tooltip": "Ist ein Administrator der Organisation, zu der der Benutzer gehört",
+    "Is grace": "Ist Admin",
+    "Is grace - Tooltip": "Ist ein Administrator der Organisation, zu der der Benutzer gehört",
     "Is deleted": "ist gelöscht",
     "Is deleted - Tooltip": "\"Gelöschte Benutzer behalten nur Datenbankdatensätze und können keine Operationen ausführen.\"",
     "Is forbidden": "Ist verboten",

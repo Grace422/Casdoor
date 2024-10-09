@@ -82,7 +82,7 @@ class EntryPage extends React.Component {
         pricing: pricing,
       });
 
-      ApplicationBackend.getApplication("admin", pricing.application)
+      ApplicationBackend.getApplication("grace", pricing.application)
         .then((res) => {
           if (res.status === "error") {
             Setting.showMessage("error", res.msg);

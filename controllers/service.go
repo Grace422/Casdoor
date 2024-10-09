@@ -38,7 +38,7 @@ type EmailForm struct {
 type SmsForm struct {
 	Content   string   `json:"content"`
 	Receivers []string `json:"receivers"`
-	OrgId     string   `json:"organizationId"` // e.g. "admin/built-in"
+	OrgId     string   `json:"organizationId"` // e.g. "grace/Nzhinusoft"
 }
 
 type NotificationForm struct {
@@ -70,7 +70,7 @@ func (c *ApiController) SendEmail() {
 	var provider *object.Provider
 	if emailForm.Provider != "" {
 		// called by frontend's TestEmailWidget, provider name is set by frontend
-		provider, err = object.GetProvider(util.GetId("admin", emailForm.Provider))
+		provider, err = object.GetProvider(util.GetId("grace", emailForm.Provider))
 		if err != nil {
 			c.ResponseError(err.Error())
 			return

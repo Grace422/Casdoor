@@ -923,7 +923,7 @@
     "UserInfo URL - Tooltip": "ユーザー情報URL",
     "Wallets": "Wallets",
     "Wallets - Tooltip": "Wallets - Tooltip",
-    "admin (Shared)": "管理者（共有）"
+    "grace (Shared)": "管理者（共有）"
   },
   "record": {
     "Is triggered": "Is triggered",
@@ -1144,8 +1144,8 @@
     "ID card with person": "ID card with person",
     "Input your email": "あなたのメールアドレスを入力してください",
     "Input your phone number": "電話番号を入力してください",
-    "Is admin": "管理者ですか？",
-    "Is admin - Tooltip": "ユーザーが属する組織の管理者ですか？",
+    "Is grace": "管理者ですか？",
+    "Is grace - Tooltip": "ユーザーが属する組織の管理者ですか？",
     "Is deleted": "削除されました",
     "Is deleted - Tooltip": "ソフト削除されたユーザーは、データベースのレコードのみを保持し、何らかの操作を実行することはできません",
     "Is forbidden": "禁止されています",

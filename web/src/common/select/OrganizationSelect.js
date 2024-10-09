@@ -34,7 +34,7 @@ function OrganizationSelect(props) {
   }, [value]);
 
   const getOrganizations = () => {
-    OrganizationBackend.getOrganizationNames("admin")
+    OrganizationBackend.getOrganizationNames("grace")
       .then((res) => {
         if (res.status === "ok") {
           setOrganizations(res.data);

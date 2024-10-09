@@ -23,7 +23,7 @@ const AppListPage = (props) => {
     if (props.account === null) {
       return;
     }
-    ApplicationBackend.getApplicationsByOrganization("admin", props.account.owner)
+    ApplicationBackend.getApplicationsByOrganization("grace", props.account.owner)
       .then((res) => {
         setApplications(res.data || []);
       });

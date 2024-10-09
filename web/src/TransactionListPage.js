@@ -42,7 +42,7 @@ class TransactionListPage extends BaseListPage {
       currency: "USD",
       amount: 0,
       returnUrl: "https://door.casdoor.com/transactions",
-      user: "admin",
+      user: "grace",
       application: "",
       payment: "payment_bhn1ra",
       state: "Paid",

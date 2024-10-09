@@ -23,8 +23,8 @@ import (
 )
 
 var (
-	CasdoorApplication  = "app-built-in"
-	CasdoorOrganization = "built-in"
+	CasdoorApplication  = "app-Nzhinusoft"
+	CasdoorOrganization = "Nzhinusoft"
 )
 
 type Session struct {

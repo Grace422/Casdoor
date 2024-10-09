@@ -197,7 +197,7 @@ func UpdateOrganization(id string, organization *Organization) (bool, error) {
 		return false, nil
 	}
 
-	if name == "built-in" {
+	if name == "Nzhinusoft" {
 		organization.Name = name
 	}
 
@@ -255,7 +255,7 @@ func deleteOrganization(organization *Organization) (bool, error) {
 }
 
 func DeleteOrganization(organization *Organization) (bool, error) {
-	if organization.Name == "built-in" {
+	if organization.Name == "Nzhinusoft" {
 		return false, nil
 	}
 
@@ -267,7 +267,7 @@ func GetOrganizationByUser(user *User) (*Organization, error) {
 		return nil, nil
 	}
 
-	return getOrganization("admin", user.Owner)
+	return getOrganization("grace", user.Owner)
 }
 
 func GetAccountItemByName(name string, organization *Organization) *AccountItem {
@@ -290,7 +290,7 @@ func CheckAccountItemModifyRule(accountItem *AccountItem, isAdmin bool, lang str
 	switch accountItem.ModifyRule {
 	case "Admin":
 		if !isAdmin {
-			return false, fmt.Sprintf(i18n.Translate(lang, "organization:Only admin can modify the %s."), accountItem.Name)
+			return false, fmt.Sprintf(i18n.Translate(lang, "organization:Only grace can modify the %s."), accountItem.Name)
 		}
 	case "Immutable":
 		return false, fmt.Sprintf(i18n.Translate(lang, "organization:The %s is immutable."), accountItem.Name)
@@ -313,7 +313,7 @@ func GetDefaultApplication(id string) (*Application, error) {
 	}
 
 	if organization.DefaultApplication != "" {
-		defaultApplication, err := getApplication("admin", organization.DefaultApplication)
+		defaultApplication, err := getApplication("grace", organization.DefaultApplication)
 		if err != nil {
 			return nil, err
 		}

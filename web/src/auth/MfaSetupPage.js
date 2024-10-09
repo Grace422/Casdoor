@@ -68,7 +68,7 @@ class MfaSetupPage extends React.Component {
   }
 
   getApplication() {
-    ApplicationBackend.getApplication("admin", this.state.applicationName)
+    ApplicationBackend.getApplication("grace", this.state.applicationName)
       .then((res) => {
         if (res !== null) {
           if (res.status === "error") {

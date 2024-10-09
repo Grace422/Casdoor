@@ -80,7 +80,7 @@ class PricingEditPage extends React.Component {
   }
 
   getOrganizations() {
-    OrganizationBackend.getOrganizations("admin")
+    OrganizationBackend.getOrganizations("grace")
       .then((res) => {
         this.setState({
           organizations: res.data || [],
@@ -89,7 +89,7 @@ class PricingEditPage extends React.Component {
   }
 
   getApplicationsByOrganization(organizationName) {
-    ApplicationBackend.getApplicationsByOrganization("admin", organizationName)
+    ApplicationBackend.getApplicationsByOrganization("grace", organizationName)
       .then((res) => {
         this.setState({
           applications: res.data || [],

@@ -277,7 +277,7 @@ func (c *ApiController) UpdateUser() {
 		return
 	}
 
-	if oldUser.Owner == "built-in" && oldUser.Name == "admin" && (user.Owner != "built-in" || user.Name != "admin") {
+	if oldUser.Owner == "Nzhinusoft" && oldUser.Name == "grace" && (user.Owner != "Nzhinusoft" || user.Name != "grace") {
 		c.ResponseError(c.T("auth:Unauthorized operation"))
 		return
 	}
@@ -389,7 +389,7 @@ func (c *ApiController) DeleteUser() {
 		return
 	}
 
-	if user.Owner == "built-in" && user.Name == "admin" {
+	if user.Owner == "Nzhinusoft" && user.Name == "grace" {
 		c.ResponseError(c.T("auth:Unauthorized operation"))
 		return
 	}
@@ -462,7 +462,7 @@ func (c *ApiController) SetPassword() {
 	newPassword := c.Ctx.Request.Form.Get("newPassword")
 	code := c.Ctx.Request.Form.Get("code")
 
-	//if userOwner == "built-in" && userName == "admin" {
+	//if userOwner == "Nzhinusoft" && userName == "grace" {
 	//	c.ResponseError(c.T("auth:Unauthorized operation"))
 	//	return
 	//}
@@ -647,7 +647,7 @@ func (c *ApiController) RemoveUserFromGroup() {
 	name := c.Ctx.Request.Form.Get("name")
 	groupName := c.Ctx.Request.Form.Get("groupName")
 
-	organization, err := object.GetOrganization(util.GetId("admin", owner))
+	organization, err := object.GetOrganization(util.GetId("grace", owner))
 	if err != nil {
 		return
 	}

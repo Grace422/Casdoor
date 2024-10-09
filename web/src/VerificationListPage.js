@@ -26,7 +26,7 @@ class VerificationListPage extends BaseListPage {
     const randomName = Setting.getRandomName();
 
     return {
-      owner: "admin",
+      owner: "grace",
       name: `Verification_${randomName}`,
       createdTime: moment().format(),
     };
@@ -42,7 +42,7 @@ class VerificationListPage extends BaseListPage {
         sorter: true,
         ...this.getColumnSearchProps("owner"),
         render: (text, record, index) => {
-          if (text === "admin") {
+          if (text === "grace") {
             return `(${i18next.t("general:empty")})`;
           }
 

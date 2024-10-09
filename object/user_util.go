@@ -525,7 +525,7 @@ func CheckPermissionForUpdateUser(oldUser, newUser *User, isAdmin bool, lang str
 	}
 
 	if oldUser.IsAdmin != newUser.IsAdmin {
-		item := GetAccountItemByName("Is admin", organization)
+		item := GetAccountItemByName("Is grace", organization)
 		if item == nil {
 			newUser.IsAdmin = oldUser.IsAdmin
 		} else {

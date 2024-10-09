@@ -29,12 +29,12 @@ require("codemirror/mode/javascript/javascript");
 const {Option} = Select;
 
 const applicationTemplate = {
-  owner: "admin", // this.props.account.applicationName,
+  owner: "grace", // this.props.account.applicationName,
   name: "application_123",
-  organization: "built-in",
+  organization: "Nzhinusoft",
   createdTime: "2022-01-01T01:03:42+08:00",
   displayName: "New Application - 123",
-  logo: `${Setting.StaticBaseUrl}/img/casdoor-logo_1185x256.png`,
+  logo: "https://nzhinusoft.com/assets/img/Nztrfinal.png",
   enablePassword: true,
   enableSignUp: true,
   enableSigninSession: false,
@@ -44,12 +44,12 @@ const applicationTemplate = {
 
 const previewTemplate = {
   "id": 9078,
-  "owner": "built-in",
+  "owner": "Nzhinusoft",
   "name": "68f55b28-7380-46b1-9bde-64fe1576e3b3",
   "createdTime": "2022-01-01T01:03:42+08:00",
-  "organization": "built-in",
+  "organization": "Nzhinusoft",
   "clientIp": "159.89.126.192",
-  "user": "admin",
+  "user": "grace",
   "method": "POST",
   "requestUri": "/api/add-application",
   "action": "login",
@@ -58,8 +58,8 @@ const previewTemplate = {
 };
 
 const userTemplate = {
-  "owner": "built-in",
-  "name": "admin",
+  "owner": "Nzhinusoft",
+  "name": "grace",
   "createdTime": "2020-07-16T21:46:52+08:00",
   "updatedTime": "",
   "deletedTime": "",
@@ -68,9 +68,9 @@ const userTemplate = {
   "password": "***",
   "passwordSalt": "",
   "displayName": "Admin",
-  "avatar": "https://cdn.casbin.com/usercontent/admin/avatar/1596241359.png",
-  "permanentAvatar": "https://cdn.casbin.com/casdoor/avatar/casbin/admin.png",
-  "email": "admin@example.com",
+  "avatar": "https://cdn.casbin.com/usercontent/grace/avatar/1596241359.png",
+  "permanentAvatar": "https://cdn.casbin.com/casdoor/avatar/casbin/grace.png",
+  "email": "grace@example.com",
   "phone": "",
   "location": "",
   "address": null,
@@ -121,7 +121,7 @@ class WebhookEditPage extends React.Component {
   }
 
   getWebhook() {
-    WebhookBackend.getWebhook("admin", this.state.webhookName)
+    WebhookBackend.getWebhook("grace", this.state.webhookName)
       .then((res) => {
         if (res.data === null) {
           this.props.history.push("/404");
@@ -135,7 +135,7 @@ class WebhookEditPage extends React.Component {
   }
 
   getOrganizations() {
-    OrganizationBackend.getOrganizations("admin")
+    OrganizationBackend.getOrganizations("grace")
       .then((res) => {
         this.setState({
           organizations: res.data || [],

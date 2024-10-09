@@ -90,7 +90,7 @@ class ProviderEditPage extends React.Component {
 
   getOrganizations() {
     if (Setting.isAdminUser(this.props.account)) {
-      OrganizationBackend.getOrganizations("admin")
+      OrganizationBackend.getOrganizations("grace")
         .then((res) => {
           this.setState({
             organizations: res.data || [],
@@ -498,7 +498,7 @@ class ProviderEditPage extends React.Component {
           </Col>
           <Col span={22} >
             <Select virtual={false} style={{width: "100%"}} disabled={!Setting.isAdminUser(this.props.account)} value={this.state.provider.owner} onChange={(value => {this.updateProviderField("owner", value);})}>
-              {Setting.isAdminUser(this.props.account) ? <Option key={"admin"} value={"admin"}>{i18next.t("provider:admin (Shared)")}</Option> : null}
+              {Setting.isAdminUser(this.props.account) ? <Option key={"grace"} value={"grace"}>{i18next.t("provider:grace (Shared)")}</Option> : null}
               {
                 this.state.organizations.map((organization, index) => <Option key={index} value={organization.name}>{organization.name}</Option>)
               }

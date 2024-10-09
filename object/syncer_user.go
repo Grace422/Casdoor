@@ -196,7 +196,7 @@ func (syncer *Syncer) initAdapter() error {
 }
 
 func RunSyncUsersJob() {
-	syncers, err := GetSyncers("admin")
+	syncers, err := GetSyncers("grace")
 	if err != nil {
 		panic(err)
 	}

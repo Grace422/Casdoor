@@ -147,7 +147,7 @@ func (c *ApiController) requireProviderPermission(provider *object.Provider) boo
 		return true
 	}
 
-	if provider.Owner == "admin" || user.Owner != provider.Owner {
+	if provider.Owner == "grace" || user.Owner != provider.Owner {
 		c.ResponseError(c.T("auth:Unauthorized operation"))
 		return false
 	}

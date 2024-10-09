@@ -33,12 +33,13 @@ class ApplicationListPage extends BaseListPage {
     const randomName = Setting.getRandomName();
     const organizationName = Setting.getRequestOrganization(this.props.account);
     return {
-      owner: "admin", // this.props.account.applicationName,
+      owner: "grace", // this.props.account.applicationName,
       name: `application_${randomName}`,
       organization: organizationName,
       createdTime: moment().format(),
       displayName: `New Application - ${randomName}`,
-      logo: `${Setting.StaticBaseUrl}/img/casdoor-logo_1185x256.png`,
+      logo: "https://nzhinusoft.com/assets/img/Nztrfinal.png",
+      // logo: `<img src="https://nzhinusoft.com/assets/img/Nztrfinal.png" alt="Nzhinusoft Logo" width="300">`,
       enablePassword: true,
       enableSignUp: true,
       enableSigninSession: false,
@@ -66,8 +67,8 @@ class ApplicationListPage extends BaseListPage {
         {name: "Providers", visible: true, required: true, rule: "None", customCss: SignupTableDefaultCssMap["Providers"]},
       ],
       grantTypes: ["authorization_code", "password", "client_credentials", "token", "id_token", "refresh_token"],
-      cert: "cert-built-in",
-      redirectUris: ["http://localhost:9000/callback"],
+      cert: "cert-Nzhinusoft",
+      redirectUris: ["http://localhost:8001/callback"],
       tokenFormat: "JWT",
       tokenFields: [],
       expireInHours: 24 * 7,
@@ -245,7 +246,7 @@ class ApplicationListPage extends BaseListPage {
               <PopconfirmModal
                 title={i18next.t("general:Sure to delete") + `: ${record.name} ?`}
                 onConfirm={() => this.deleteApplication(index)}
-                disabled={record.name === "app-built-in"}
+                disabled={record.name === "app-Nzhinusoft"}
               >
               </PopconfirmModal>
             </div>
@@ -281,8 +282,8 @@ class ApplicationListPage extends BaseListPage {
     const field = params.searchedColumn, value = params.searchText;
     const sortField = params.sortField, sortOrder = params.sortOrder;
     this.setState({loading: true});
-    (Setting.isDefaultOrganizationSelected(this.props.account) ? ApplicationBackend.getApplications("admin", params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder) :
-      ApplicationBackend.getApplicationsByOrganization("admin", Setting.getRequestOrganization(this.props.account), params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder))
+    (Setting.isDefaultOrganizationSelected(this.props.account) ? ApplicationBackend.getApplications("grace", params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder) :
+      ApplicationBackend.getApplicationsByOrganization("grace", Setting.getRequestOrganization(this.props.account), params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder))
       .then((res) => {
         this.setState({
           loading: false,

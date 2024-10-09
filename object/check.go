@@ -345,7 +345,7 @@ func CheckUserPassword(organization string, username string, password string, la
 	}
 
 	if user.IsForbidden {
-		return nil, fmt.Errorf(i18n.Translate(lang, "check:The user is forbidden to sign in, please contact the administrator"))
+		return nil, fmt.Errorf(i18n.Translate(lang, "check:The user is forbidden to sign in, please contact the graceistrator"))
 	}
 
 	if isSigninViaLdap {
@@ -399,7 +399,7 @@ func CheckUserPermission(requestUserId, userId string, strict bool, lang string)
 		}
 
 		if targetUser == nil {
-			if strings.HasPrefix(requestUserId, "built-in/") {
+			if strings.HasPrefix(requestUserId, "Nzhinusoft/") {
 				return true, nil
 			}
 
@@ -439,7 +439,7 @@ func CheckUserPermission(requestUserId, userId string, strict bool, lang string)
 
 func CheckLoginPermission(userId string, application *Application) (bool, error) {
 	owner, _ := util.GetOwnerAndNameFromId(userId)
-	if owner == "built-in" {
+	if owner == "Nzhinusoft" {
 		return true, nil
 	}
 

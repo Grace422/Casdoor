@@ -94,7 +94,7 @@ func GetModelEx(id string) (*Model, error) {
 		return model, nil
 	}
 
-	return getModel("built-in", name)
+	return getModel("Nzhinusoft", name)
 }
 
 func UpdateModelWithCheck(id string, modelObj *Model) error {

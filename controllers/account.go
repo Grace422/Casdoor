@@ -90,7 +90,7 @@ func (c *ApiController) Signup() {
 		return
 	}
 
-	application, err := object.GetApplication(fmt.Sprintf("admin/%s", authForm.Application))
+	application, err := object.GetApplication(fmt.Sprintf("grace/%s", authForm.Application))
 	if err != nil {
 		c.ResponseError(err.Error())
 		return
@@ -105,7 +105,7 @@ func (c *ApiController) Signup() {
 		return
 	}
 
-	organization, err := object.GetOrganization(util.GetId("admin", authForm.Organization))
+	organization, err := object.GetOrganization(util.GetId("grace", authForm.Organization))
 	if err != nil {
 		c.ResponseError(c.T(err.Error()))
 		return
@@ -334,7 +334,7 @@ func (c *ApiController) Logout() {
 		util.LogInfo(c.Ctx, "API: [%s] logged out", user)
 
 		application := c.GetSessionApplication()
-		if application == nil || application.Name == "app-built-in" || application.HomepageUrl == "" {
+		if application == nil || application.Name == "app-Nzhinusoft" || application.HomepageUrl == "" {
 			c.ResponseOk(user)
 			return
 		}

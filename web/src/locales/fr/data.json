@@ -290,7 +290,7 @@
     "MFA items": "Type d'authentification multifacteur",
     "MFA items - Tooltip": "Types d'authentification multifacteur - Infobulle",
     "Master password": "Mot de passe passe-partout",
-    "Master password - Tooltip": "Mot de passe qui peut être utilisé pour se connecter à tous les comptes sous cette organisation, ce qui facilite la connexion des administrateurs et administratrices en tant que ce compte pour résoudre les problèmes techniques",
+    "Master password - Tooltip": "Mot de passe qui peut être utilisé pour se connecter à tous les comptes sous cette organisation, ce qui facilite la connexion des graceistrateurs et graceistratrices en tant que ce compte pour résoudre les problèmes techniques",
     "Master verification code": "Master verification code",
     "Master verification code - Tooltip": "Master verification code - Tooltip",
     "Menu": "Menu",
@@ -445,10 +445,10 @@
     "Used count - Tooltip": "Used count - Tooltip"
   },
   "ldap": {
-    "Admin": "Compte d'administration",
-    "Admin - Tooltip": "CN ou ID du compte d'administration du serveur LDAP",
-    "Admin Password": "Mot de passe du compte d'administration",
-    "Admin Password - Tooltip": "Mot de passe administrateur du serveur LDAP",
+    "Admin": "Compte d'graceistration",
+    "Admin - Tooltip": "CN ou ID du compte d'graceistration du serveur LDAP",
+    "Admin Password": "Mot de passe du compte d'graceistration",
+    "Admin Password - Tooltip": "Mot de passe graceistrateur du serveur LDAP",
     "Auto Sync": "Synchronisation automatique",
     "Auto Sync - Tooltip": "Configuration de synchronisation automatique, désactivée à 0",
     "Base DN": "DN racine",
@@ -587,7 +587,7 @@
     "Init score": "Score initial",
     "Init score - Tooltip": "Score initial attribué au compte lors de leur inscription",
     "Is profile public": "Est-ce que le profil est public ?",
-    "Is profile public - Tooltip": "Après sa fermeture, seuls les administrateurs et administratrices globales ou les comptes de la même organisation peuvent accéder à la page de profil de l'utilisateur",
+    "Is profile public - Tooltip": "Après sa fermeture, seuls les graceistrateurs et graceistratrices globales ou les comptes de la même organisation peuvent accéder à la page de profil de l'utilisateur",
     "Modify rule": "Règle de modification",
     "New Organization": "Nouvelle organisation",
     "Optional": "Optionnel",
@@ -923,7 +923,7 @@
     "UserInfo URL - Tooltip": "URL d'information du compte (UserInfo)",
     "Wallets": "Portefeuille",
     "Wallets - Tooltip": "Portefeuille - Infobulle",
-    "admin (Shared)": "admin (Partagé)"
+    "grace (Shared)": "grace (Partagé)"
   },
   "record": {
     "Is triggered": "Is triggered",
@@ -1144,8 +1144,8 @@
     "ID card with person": "Pièce d'identité avec une personne",
     "Input your email": "Saisissez votre adresse e-mail",
     "Input your phone number": "Saisissez votre numéro de téléphone",
-    "Is admin": "Est administrateur ou administratrice",
-    "Is admin - Tooltip": "Est administrateur ou administratrice de l'organisation à laquelle le compte appartient",
+    "Is grace": "Est graceistrateur ou graceistratrice",
+    "Is grace - Tooltip": "Est graceistrateur ou graceistratrice de l'organisation à laquelle le compte appartient",
     "Is deleted": "Est supprimé",
     "Is deleted - Tooltip": "Les comptes supprimés de manière douce conservent les enregistrements en base de données mais ne peuvent pas effectuer d'opérations",
     "Is forbidden": "Est interdit",

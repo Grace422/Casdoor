@@ -115,7 +115,7 @@ class App extends Component {
     } else if (uri.includes("/products") || uri.includes("/payments") || uri.includes("/plans") || uri.includes("/pricings") || uri.includes("/subscriptions")) {
       this.setState({selectedMenuKey: "/business"});
     } else if (uri.includes("/sysinfo") || uri.includes("/syncers") || uri.includes("/webhooks")) {
-      this.setState({selectedMenuKey: "/admin"});
+      this.setState({selectedMenuKey: "/grace"});
     } else if (uri.includes("/signup")) {
       this.setState({selectedMenuKey: "/signup"});
     } else if (uri.includes("/login")) {
@@ -206,7 +206,7 @@ class App extends Component {
     if (!applicationName) {
       return;
     }
-    ApplicationBackend.getApplication("admin", applicationName)
+    ApplicationBackend.getApplication("grace", applicationName)
       .then((res) => {
         if (res.status === "error") {
           Setting.showMessage("error", res.msg);
@@ -287,7 +287,7 @@ class App extends Component {
               : (
                 Conf.CustomFooter !== null ? Conf.CustomFooter : (
                   <React.Fragment>
-                  Powered by <a target="_blank" href="https://casdoor.org" rel="noreferrer"><img style={{paddingBottom: "3px"}} height={"20px"} alt={"Casdoor"} src={this.state.logo} /></a>
+                  Powered by <a target="_blank" href="https://nzhinusoft.com/" rel="noreferrer"><img style={{paddingBottom: "3px"}} height={"20px"} alt={"Nzhinusoft"} src="https://nzhinusoft.com/assets/img/Nztrfinal.png" /></a>
                   </React.Fragment>
                 )
               )

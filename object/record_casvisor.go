@@ -21,7 +21,7 @@ import (
 )
 
 func getCasvisorApplication() *Application {
-	applications, err := GetApplications("admin")
+	applications, err := GetApplications("grace")
 	if err != nil {
 		panic(err)
 	}

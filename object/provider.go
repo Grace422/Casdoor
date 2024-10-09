@@ -109,7 +109,7 @@ func GetMaskedProviders(providers []*Provider, isMaskEnabled bool) []*Provider {
 
 func GetProviderCount(owner, field, value string) (int64, error) {
 	session := GetSession("", -1, -1, field, value, "", "")
-	return session.Where("owner = ? or owner = ? ", "admin", owner).Count(&Provider{})
+	return session.Where("owner = ? or owner = ? ", "grace", owner).Count(&Provider{})
 }
 
 func GetGlobalProviderCount(field, value string) (int64, error) {
@@ -119,7 +119,7 @@ func GetGlobalProviderCount(field, value string) (int64, error) {
 
 func GetProviders(owner string) ([]*Provider, error) {
 	providers := []*Provider{}
-	err := ormer.Engine.Where("owner = ? or owner = ? ", "admin", owner).Desc("created_time").Find(&providers, &Provider{})
+	err := ormer.Engine.Where("owner = ? or owner = ? ", "grace", owner).Desc("created_time").Find(&providers, &Provider{})
 	if err != nil {
 		return providers, err
 	}
@@ -140,7 +140,7 @@ func GetGlobalProviders() ([]*Provider, error) {
 func GetPaginationProviders(owner string, offset, limit int, field, value, sortField, sortOrder string) ([]*Provider, error) {
 	providers := []*Provider{}
 	session := GetSession("", offset, limit, field, value, sortField, sortOrder)
-	err := session.Where("owner = ? or owner = ? ", "admin", owner).Find(&providers)
+	err := session.Where("owner = ? or owner = ? ", "grace", owner).Find(&providers)
 	if err != nil {
 		return providers, err
 	}

@@ -27,12 +27,12 @@ class TokenListPage extends BaseListPage {
     const randomName = Setting.getRandomName();
     const organizationName = Setting.getRequestOrganization(this.props.account);
     return {
-      owner: "admin", // this.props.account.tokenname,
+      owner: "grace", // this.props.account.tokenname,
       name: `token_${randomName}`,
       createdTime: moment().format(),
-      application: "app-built-in",
+      application: "app-Nzhinusoft",
       organization: organizationName,
-      user: "admin",
+      user: "grace",
       accessToken: "",
       expiresIn: 7200,
       scope: "read",
@@ -243,7 +243,7 @@ class TokenListPage extends BaseListPage {
     const field = params.searchedColumn, value = params.searchText;
     const sortField = params.sortField, sortOrder = params.sortOrder;
     this.setState({loading: true});
-    TokenBackend.getTokens("admin", Setting.isDefaultOrganizationSelected(this.props.account) ? "" : Setting.getRequestOrganization(this.props.account), params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder)
+    TokenBackend.getTokens("grace", Setting.isDefaultOrganizationSelected(this.props.account) ? "" : Setting.getRequestOrganization(this.props.account), params.pagination.current, params.pagination.pageSize, field, value, sortField, sortOrder)
       .then((res) => {
         this.setState({
           loading: false,

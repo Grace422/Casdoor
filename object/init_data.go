@@ -379,7 +379,7 @@ func initDefinedLdap(ldap *Ldap) {
 }
 
 func initDefinedProvider(provider *Provider) {
-	existed, err := GetProvider(util.GetId("admin", provider.Name))
+	existed, err := GetProvider(util.GetId("grace", provider.Name))
 	if err != nil {
 		panic(err)
 	}

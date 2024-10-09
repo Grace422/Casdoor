@@ -85,7 +85,7 @@ const sideTemplate = `<style>
   }
 </style>
 <div class="left-model">
-  <span class="side-logo"> <img src="https://cdn.casbin.org/img/casdoor-logo_1185x256.png" alt="Casdoor" style="width: 120px"> 
+  <span class="side-logo"> <img src="https://nzhinusoft.com/assets/img/Nztrfinal.png" alt="Nzhinusoft" style="width: 120px"> 
     <span>SSO</span> 
   </span>
   <div class="img">
@@ -119,7 +119,7 @@ class ApplicationEditPage extends React.Component {
   }
 
   getApplication() {
-    ApplicationBackend.getApplication("admin", this.state.applicationName)
+    ApplicationBackend.getApplication("grace", this.state.applicationName)
       .then((res) => {
         if (res.data === null) {
           this.props.history.push("/404");
@@ -153,7 +153,7 @@ class ApplicationEditPage extends React.Component {
   }
 
   getOrganizations() {
-    OrganizationBackend.getOrganizations("admin")
+    OrganizationBackend.getOrganizations("grace")
       .then((res) => {
         if (res.status === "error") {
           this.setState({
@@ -198,7 +198,7 @@ class ApplicationEditPage extends React.Component {
   }
 
   getSamlMetadata(checked) {
-    ApplicationBackend.getSamlMetadata("admin", this.state.applicationName, checked)
+    ApplicationBackend.getSamlMetadata("grace", this.state.applicationName, checked)
       .then((data) => {
         this.setState({
           samlMetadata: data,
@@ -257,7 +257,7 @@ class ApplicationEditPage extends React.Component {
             {Setting.getLabel(i18next.t("general:Name"), i18next.t("general:Name - Tooltip"))} :
           </Col>
           <Col span={22} >
-            <Input value={this.state.application.name} disabled={this.state.application.name === "app-built-in"} onChange={e => {
+            <Input value={this.state.application.name} disabled={this.state.application.name === "app-Nzhinusoft"} onChange={e => {
               this.updateApplicationField("name", e.target.value);
             }} />
           </Col>
@@ -749,7 +749,7 @@ class ApplicationEditPage extends React.Component {
             />
             <br />
             <Button style={{marginBottom: "10px"}} type="primary" shape="round" icon={<CopyOutlined />} onClick={() => {
-              copy(`${window.location.origin}/api/saml/metadata?application=admin/${encodeURIComponent(this.state.applicationName)}&post=${this.state.application.enableSamlPostBinding}`);
+              copy(`${window.location.origin}/api/saml/metadata?application=grace/${encodeURIComponent(this.state.applicationName)}&post=${this.state.application.enableSamlPostBinding}`);
               Setting.showMessage("success", i18next.t("general:Copied to clipboard successfully"));
             }}
             >
@@ -1135,7 +1135,7 @@ class ApplicationEditPage extends React.Component {
     application.providers = application.providers?.filter(provider => this.state.providers.map(provider => provider.name).includes(provider.name));
     application.signinMethods = application.signinMethods?.filter(signinMethod => ["Password", "Verification code", "WebAuthn", "LDAP", "Face ID"].includes(signinMethod.name));
 
-    ApplicationBackend.updateApplication("admin", this.state.applicationName, application)
+    ApplicationBackend.updateApplication("grace", this.state.applicationName, application)
       .then((res) => {
         if (res.status === "ok") {
           Setting.showMessage("success", i18next.t("general:Successfully saved"));

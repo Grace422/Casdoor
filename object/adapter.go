@@ -227,9 +227,9 @@ func adapterChangeTrigger(oldName string, newName string) error {
 }
 
 func (adapter *Adapter) isBuiltIn() bool {
-	if adapter.Owner != "built-in" {
+	if adapter.Owner != "Nzhinusoft" {
 		return false
 	}
 
-	return adapter.Name == "user-adapter-built-in" || adapter.Name == "api-adapter-built-in"
+	return adapter.Name == "user-adapter-Nzhinusoft" || adapter.Name == "api-adapter-Nzhinusoft"
 }

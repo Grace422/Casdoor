@@ -22,7 +22,7 @@ class CaptchaPage extends React.Component {
     super(props);
     const params = new URLSearchParams(this.props.location.search);
     this.state = {
-      owner: "admin",
+      owner: "grace",
       application: null,
       clientId: params.get("client_id"),
       applicationName: params.get("state"),

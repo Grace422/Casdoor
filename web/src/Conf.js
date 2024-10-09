@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-export const DefaultApplication = "app-built-in";
+export const DefaultApplication = "app-Nzhinusoft";
 
 export const CasvisorUrl = "";
 
@@ -20,7 +20,7 @@ export const ShowGithubCorner = false;
 export const IsDemoMode = false;
 
 export const ForceLanguage = "";
-export const DefaultLanguage = "en";
+export const DefaultLanguage = "fr";
 
 export const InitThemeAlgorithm = true;
 export const ThemeDefault = {

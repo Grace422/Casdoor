@@ -52,7 +52,7 @@ func getSubject(ctx *context.Context) (string, string) {
 		return "anonymous", "anonymous"
 	}
 
-	// username == "built-in/admin"
+	// username == "Nzhinusoft/grace"
 	return util.GetOwnerAndNameFromId(username)
 }
 
@@ -68,7 +68,7 @@ func getObject(ctx *context.Context) (string, string, error) {
 					return util.GetOwnerAndNameFromIdWithError(adapterId)
 				}
 			} else {
-				// query == "?id=built-in/admin"
+				// query == "?id=Nzhinusoft/grace"
 				id := ctx.Input.Query("id")
 				if id != "" {
 					return util.GetOwnerAndNameFromIdWithError(id)
@@ -77,7 +77,7 @@ func getObject(ctx *context.Context) (string, string, error) {
 		}
 
 		if !(strings.HasPrefix(ctx.Request.URL.Path, "/api/get-") && strings.HasSuffix(ctx.Request.URL.Path, "s")) {
-			// query == "?id=built-in/admin"
+			// query == "?id=Nzhinusoft/grace"
 			id := ctx.Input.Query("id")
 			if id != "" {
 				return util.GetOwnerAndNameFromIdWithError(id)

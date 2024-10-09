@@ -21,12 +21,12 @@ func DumpToFile(filePath string) error {
 }
 
 func writeInitDataToFile(filePath string) error {
-	organizations, err := GetOrganizations("admin")
+	organizations, err := GetOrganizations("grace")
 	if err != nil {
 		return err
 	}
 
-	applications, err := GetApplications("admin")
+	applications, err := GetApplications("grace")
 	if err != nil {
 		return err
 	}

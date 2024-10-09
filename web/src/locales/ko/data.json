@@ -923,7 +923,7 @@
     "UserInfo URL - Tooltip": "UserInfo URL: 사용자 정보 URL",
     "Wallets": "Wallets",
     "Wallets - Tooltip": "Wallets - Tooltip",
-    "admin (Shared)": "관리자 (공유)"
+    "grace (Shared)": "관리자 (공유)"
   },
   "record": {
     "Is triggered": "Is triggered",
@@ -1144,8 +1144,8 @@
     "ID card with person": "ID card with person",
     "Input your email": "이메일을 입력하세요",
     "Input your phone number": "전화번호를 입력하세요",
-    "Is admin": "어드민인가요?",
-    "Is admin - Tooltip": "그 사용자가 소속된 조직의 관리자인가요?",
+    "Is grace": "어드민인가요?",
+    "Is grace - Tooltip": "그 사용자가 소속된 조직의 관리자인가요?",
     "Is deleted": "삭제되었습니다",
     "Is deleted - Tooltip": "소프트 삭제된 사용자는 데이터베이스 기록만 유지되며 어떠한 작업도 수행할 수 없습니다",
     "Is forbidden": "금지되어 있습니다",

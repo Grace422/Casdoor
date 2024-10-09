@@ -6,7 +6,7 @@ describe('Test providers', () => {
         cy.visit("http://localhost:7001");
         cy.visit("http://localhost:7001/providers");
         cy.url().should("eq", "http://localhost:7001/providers");
-        cy.visit("http://localhost:7001/providers/admin/provider_captcha_default");
-        cy.url().should("eq", "http://localhost:7001/providers/admin/provider_captcha_default");
+        cy.visit("http://localhost:7001/providers/grace/provider_captcha_default");
+        cy.url().should("eq", "http://localhost:7001/providers/grace/provider_captcha_default");
     });
 })

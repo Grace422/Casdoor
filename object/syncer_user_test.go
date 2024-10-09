@@ -23,7 +23,7 @@ import (
 
 func TestGetUsers(t *testing.T) {
 	InitConfig()
-	syncers, _ := GetSyncers("admin")
+	syncers, _ := GetSyncers("grace")
 	syncer := syncers[0]
 	syncer.initAdapter()
 	users, _ := syncer.getOriginalUsers()

@@ -923,7 +923,7 @@
     "UserInfo URL - Tooltip": "Địa chỉ URL của Thông tin người dùng",
     "Wallets": "Wallets",
     "Wallets - Tooltip": "Wallets - Tooltip",
-    "admin (Shared)": "quản trị viên (Chung)"
+    "grace (Shared)": "quản trị viên (Chung)"
   },
   "record": {
     "Is triggered": "Is triggered",
@@ -1144,8 +1144,8 @@
     "ID card with person": "ID card with person",
     "Input your email": "Nhập địa chỉ email của bạn",
     "Input your phone number": "Nhập số điện thoại của bạn",
-    "Is admin": "Là quản trị viên",
-    "Is admin - Tooltip": "Có phải người quản trị của tổ chức mà người dùng thuộc về không?",
+    "Is grace": "Là quản trị viên",
+    "Is grace - Tooltip": "Có phải người quản trị của tổ chức mà người dùng thuộc về không?",
     "Is deleted": "Đã bị xóa",
     "Is deleted - Tooltip": "Người dùng đã xóa mềm chỉ giữ lại các bản ghi trong cơ sở dữ liệu và không thể thực hiện bất kỳ thao tác nào",
     "Is forbidden": "Bị cấm",

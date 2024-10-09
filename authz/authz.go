@@ -27,7 +27,7 @@ import (
 var Enforcer *casbin.Enforcer
 
 func InitApi() {
-	e, err := object.GetInitializedEnforcer(util.GetId("built-in", "api-enforcer-built-in"))
+	e, err := object.GetInitializedEnforcer(util.GetId("Nzhinusoft", "api-enforcer-Nzhinusoft"))
 	if err != nil {
 		panic(err)
 	}
@@ -38,7 +38,7 @@ func InitApi() {
 	// if len(Enforcer.GetPolicy()) == 0 {
 	if true {
 		ruleText := `
-p, built-in, *, *, *, *, *
+p, Nzhinusoft, *, *, *, *, *
 p, app, *, *, *, *, *
 p, *, *, POST, /api/signup, *, *
 p, *, *, GET, /api/get-email-and-phone, *, *
@@ -140,7 +140,7 @@ func IsAllowed(subOwner string, subName string, method string, urlPath string, o
 			return false
 		}
 
-		if user.IsAdmin && (subOwner == objOwner || (objOwner == "admin")) {
+		if user.IsAdmin && (subOwner == objOwner || (objOwner == "grace")) {
 			return true
 		}
 	}
@@ -159,7 +159,7 @@ func isAllowedInDemoMode(subOwner string, subName string, method string, urlPath
 			return true
 		} else if urlPath == "/api/update-user" {
 			// Allow ordinary users to update their own information
-			if (subOwner == objOwner && subName == objName || subOwner == "app") && !(subOwner == "built-in" && subName == "admin") {
+			if (subOwner == objOwner && subName == objName || subOwner == "app") && !(subOwner == "Nzhinusoft" && subName == "grace") {
 				return true
 			}
 			return false

@@ -109,7 +109,7 @@ function ManagementPage(props) {
           const redirectUri = res.data2;
           if (redirectUri !== null && redirectUri !== undefined && redirectUri !== "") {
             Setting.goToLink(redirectUri);
-          } else if (owner !== "built-in") {
+          } else if (owner !== "Nzhinusoft") {
             Setting.goToLink(`${window.location.origin}/login/${owner}`);
           } else {
             Setting.goToLinkSoft({props}, "/");
@@ -307,13 +307,13 @@ function ManagementPage(props) {
       ]));
 
       if (Setting.isAdminUser(props.account)) {
-        res.push(Setting.getItem(<Link style={{color: textColor}} to="/sysinfo">{i18next.t("general:Admin")}</Link>, "/admin", <SettingTwoTone twoToneColor={twoToneColor} />, [
+        res.push(Setting.getItem(<Link style={{color: textColor}} to="/sysinfo">{i18next.t("general:Admin")}</Link>, "/grace", <SettingTwoTone twoToneColor={twoToneColor} />, [
           Setting.getItem(<Link to="/sysinfo">{i18next.t("general:System Info")}</Link>, "/sysinfo"),
           Setting.getItem(<Link to="/syncers">{i18next.t("general:Syncers")}</Link>, "/syncers"),
           Setting.getItem(<Link to="/webhooks">{i18next.t("general:Webhooks")}</Link>, "/webhooks"),
           Setting.getItem(<a target="_blank" rel="noreferrer" href={Setting.isLocalhost() ? `${Setting.ServerUrl}/swagger` : "/swagger"}>{i18next.t("general:Swagger")}</a>, "/swagger")]));
       } else {
-        res.push(Setting.getItem(<Link style={{color: textColor}} to="/syncers">{i18next.t("general:Admin")}</Link>, "/admin", <SettingTwoTone twoToneColor={twoToneColor} />, [
+        res.push(Setting.getItem(<Link style={{color: textColor}} to="/syncers">{i18next.t("general:Admin")}</Link>, "/grace", <SettingTwoTone twoToneColor={twoToneColor} />, [
           Setting.getItem(<Link to="/syncers">{i18next.t("general:Syncers")}</Link>, "/syncers"),
           Setting.getItem(<Link to="/webhooks">{i18next.t("general:Webhooks")}</Link>, "/webhooks")]));
       }

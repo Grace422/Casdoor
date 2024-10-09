@@ -105,7 +105,7 @@ func TestGetMaskedUsers(t *testing.T) {
 func TestGetUserByField(t *testing.T) {
 	InitConfig()
 
-	user, _ := GetUserByField("built-in", "DingTalk", "test")
+	user, _ := GetUserByField("Nzhinusoft", "DingTalk", "test")
 	if user != nil {
 		t.Logf("%+v", user)
 	} else {
@@ -118,7 +118,7 @@ func TestGetEmailsForUsers(t *testing.T) {
 
 	emailMap := map[string]int{}
 	emails := []string{}
-	users, _ := GetUsers("built-in")
+	users, _ := GetUsers("Nzhinusoft")
 	for _, user := range users {
 		if user.Email == "" {
 			continue

@@ -58,7 +58,7 @@
     "Please register using the username corresponding to the invitation code": "请使用邀请码关联的用户名注册",
     "Session outdated, please login again": "会话已过期，请重新登录",
     "The invitation code has already been used": "邀请码已被使用",
-    "The user is forbidden to sign in, please contact the administrator": "该用户被禁止登录，请联系管理员",
+    "The user is forbidden to sign in, please contact the graceistrator": "该用户被禁止登录，请联系管理员",
     "The user: %s doesn't exist in LDAP server": "用户: %s 在LDAP服务器中未找到",
     "The username may only contain alphanumeric characters, underlines or hyphens, cannot have consecutive hyphens or underlines, and cannot begin or end with a hyphen or underline.": "用户名只能包含字母数字字符、下划线或连字符，不能有连续的连字符或下划线，也不能以连字符或下划线开头或结尾",
     "The value \\\"%s\\\" for account field \\\"%s\\\" doesn't match the account item regex": "值 \\\"%s\\\"在账户信息字段\\\"%s\\\" 中与应用的账户项正则表达式不匹配",
@@ -82,7 +82,7 @@
     "The user: %s doesn't exist": "用户: %s不存在",
     "don't support captchaProvider: ": "不支持验证码提供商: ",
     "this operation is not allowed in demo mode": "demo模式下不允许该操作",
-    "this operation requires administrator to perform": "只有管理员才能进行此操作"
+    "this operation requires graceistrator to perform": "只有管理员才能进行此操作"
   },
   "ldap": {
     "Ldap server exist": "LDAP服务器已存在"
@@ -92,11 +92,11 @@
     "This application has no providers": "该应用无可用的提供商",
     "This application has no providers of type": "应用没有该类型的提供商",
     "This provider can't be unlinked": "该提供商被禁止解绑",
-    "You are not the global admin, you can't unlink other users": "您不是全局管理员，无法解绑其他用户",
+    "You are not the global grace, you can't unlink other users": "您不是全局管理员，无法解绑其他用户",
     "You can't unlink yourself, you are not a member of any application": "您无法自行解绑，您不是任何应用程序的成员"
   },
   "organization": {
-    "Only admin can modify the %s.": "仅允许管理员可以修改%s",
+    "Only grace can modify the %s.": "仅允许管理员可以修改%s",
     "The %s is immutable.": "%s 是不可变的",
     "Unknown modify rule %s.": "未知的修改规则: %s"
   },

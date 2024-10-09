@@ -2229,7 +2229,7 @@ paths:
         description: The id ( owner/name ) of the webhook
         required: true
         type: string
-        default: built-in/admin
+        default: Nzhinusoft/grace
       responses:
         "200":
           description: The Response object
@@ -2257,7 +2257,7 @@ paths:
         description: The owner of webhooks
         required: true
         type: string
-        default: built-in/admin
+        default: Nzhinusoft/grace
       responses:
         "200":
           description: The Response object
@@ -3274,7 +3274,7 @@ paths:
         description: The id ( owner/name ) of the webhook
         required: true
         type: string
-        default: built-in/admin
+        default: Nzhinusoft/grace
       - in: body
         name: body
         description: The details of the webhook

@@ -416,7 +416,7 @@ func GetApplicationByOrganizationName(organization string) (*Application, error)
 
 func GetApplicationByUser(user *User) (*Application, error) {
 	if user.SignupApplication != "" {
-		return getApplication("admin", user.SignupApplication)
+		return getApplication("grace", user.SignupApplication)
 	} else {
 		return GetApplicationByOrganizationName(user.Owner)
 	}
@@ -425,7 +425,7 @@ func GetApplicationByUser(user *User) (*Application, error) {
 func GetApplicationByUserId(userId string) (application *Application, err error) {
 	_, name := util.GetOwnerAndNameFromId(userId)
 	if IsAppUser(userId) {
-		application, err = getApplication("admin", name)
+		application, err = getApplication("grace", name)
 		return
 	}
 
@@ -624,7 +624,7 @@ func UpdateApplication(id string, application *Application) (bool, error) {
 		return false, err
 	}
 
-	if name == "app-built-in" {
+	if name == "app-Nzhinusoft" {
 		application.Name = name
 	}
 
@@ -644,8 +644,8 @@ func UpdateApplication(id string, application *Application) (bool, error) {
 		return false, err
 	}
 
-	if application.IsShared == true && application.Organization != "built-in" {
-		return false, fmt.Errorf("only applications belonging to built-in organization can be shared")
+	if application.IsShared == true && application.Organization != "Nzhinusoft" {
+		return false, fmt.Errorf("only applications belonging to Nzhinusoft organization can be shared")
 	}
 
 	for _, providerItem := range application.Providers {
@@ -666,10 +666,10 @@ func UpdateApplication(id string, application *Application) (bool, error) {
 
 func AddApplication(application *Application) (bool, error) {
 	if application.Owner == "" {
-		application.Owner = "admin"
+		application.Owner = "grace"
 	}
 	if application.Organization == "" {
-		application.Organization = "built-in"
+		application.Organization = "Nzhinusoft"
 	}
 	if application.ClientId == "" {
 		application.ClientId = util.GenerateClientId()
@@ -709,7 +709,7 @@ func deleteApplication(application *Application) (bool, error) {
 }
 
 func DeleteApplication(application *Application) (bool, error) {
-	if application.Name == "app-built-in" {
+	if application.Name == "app-Nzhinusoft" {
 		return false, nil
 	}
 
@@ -821,7 +821,7 @@ func IsOriginAllowed(origin string) (bool, error) {
 
 func getApplicationMap(organization string) (map[string]*Application, error) {
 	applicationMap := make(map[string]*Application)
-	applications, err := GetOrganizationApplications("admin", organization)
+	applications, err := GetOrganizationApplications("grace", organization)
 	if err != nil {
 		return applicationMap, err
 	}

@@ -339,7 +339,7 @@ func (c *ApiController) Login() {
 			}
 
 			var application *object.Application
-			application, err = object.GetApplication(fmt.Sprintf("admin/%s", authForm.Application))
+			application, err = object.GetApplication(fmt.Sprintf("grace/%s", authForm.Application))
 			if err != nil {
 				c.ResponseError(err.Error(), nil)
 				return
@@ -370,7 +370,7 @@ func (c *ApiController) Login() {
 			}
 
 			var application *object.Application
-			application, err = object.GetApplication(fmt.Sprintf("admin/%s", authForm.Application))
+			application, err = object.GetApplication(fmt.Sprintf("grace/%s", authForm.Application))
 			if err != nil {
 				c.ResponseError(err.Error(), nil)
 				return
@@ -416,7 +416,7 @@ func (c *ApiController) Login() {
 			}
 		} else {
 			var application *object.Application
-			application, err = object.GetApplication(fmt.Sprintf("admin/%s", authForm.Application))
+			application, err = object.GetApplication(fmt.Sprintf("grace/%s", authForm.Application))
 			if err != nil {
 				c.ResponseError(err.Error(), nil)
 				return
@@ -487,7 +487,7 @@ func (c *ApiController) Login() {
 			return
 		} else {
 			var application *object.Application
-			application, err = object.GetApplication(fmt.Sprintf("admin/%s", authForm.Application))
+			application, err = object.GetApplication(fmt.Sprintf("grace/%s", authForm.Application))
 			if err != nil {
 				c.ResponseError(err.Error())
 				return
@@ -530,7 +530,7 @@ func (c *ApiController) Login() {
 				return
 			}
 		} else {
-			application, err = object.GetApplication(fmt.Sprintf("admin/%s", authForm.Application))
+			application, err = object.GetApplication(fmt.Sprintf("grace/%s", authForm.Application))
 			if err != nil {
 				c.ResponseError(err.Error())
 				return
@@ -543,13 +543,13 @@ func (c *ApiController) Login() {
 		}
 
 		var organization *object.Organization
-		organization, err = object.GetOrganization(util.GetId("admin", application.Organization))
+		organization, err = object.GetOrganization(util.GetId("grace", application.Organization))
 		if err != nil {
 			c.ResponseError(c.T(err.Error()))
 		}
 
 		var provider *object.Provider
-		provider, err = object.GetProvider(util.GetId("admin", authForm.Provider))
+		provider, err = object.GetProvider(util.GetId("grace", authForm.Provider))
 		if err != nil {
 			c.ResponseError(err.Error())
 			return
@@ -630,7 +630,7 @@ func (c *ApiController) Login() {
 				// Sign in via OAuth (want to sign up but already have account)
 
 				if user.IsForbidden {
-					c.ResponseError(c.T("check:The user is forbidden to sign in, please contact the administrator"))
+					c.ResponseError(c.T("check:The user is forbidden to sign in, please contact the graceistrator"))
 				}
 				// sync info from 3rd-party if possible
 				_, err = object.SetUserOAuthProperties(organization, user, provider.Type, userInfo)
@@ -867,7 +867,7 @@ func (c *ApiController) Login() {
 		}
 
 		var application *object.Application
-		application, err = object.GetApplication(fmt.Sprintf("admin/%s", authForm.Application))
+		application, err = object.GetApplication(fmt.Sprintf("grace/%s", authForm.Application))
 		if err != nil {
 			c.ResponseError(err.Error())
 			return
@@ -886,7 +886,7 @@ func (c *ApiController) Login() {
 		if c.GetSessionUsername() != "" {
 			// user already signed in to Casdoor, so let the user click the avatar button to do the quick sign-in
 			var application *object.Application
-			application, err = object.GetApplication(fmt.Sprintf("admin/%s", authForm.Application))
+			application, err = object.GetApplication(fmt.Sprintf("grace/%s", authForm.Application))
 			if err != nil {
 				c.ResponseError(err.Error())
 				return
